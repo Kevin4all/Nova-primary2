@@ -44,6 +44,7 @@ $routes->post('/logear_administrador', 'Portal/Login_docente::comprobar_alumno',
 $routes->get('/inicio_alumno', 'Portal/Inicio_alumno::index', ['as' => 'inicio_alumno']);
 
 $routes->get('/dashboard', 'Panel/dashboard::index', ['as' => 'dashboard']);
+$routes->get('/periodos', 'Panel/Periodos::index', ['as' => 'periodos']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

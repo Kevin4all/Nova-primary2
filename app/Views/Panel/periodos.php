@@ -45,7 +45,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="<?= base_url("dashboard");?>"
+                href="<?= base_url('recursos_panel/public/cards.html')?>"
               >
                 <svg
                   class="w-5 h-5"
@@ -68,7 +68,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="<?= base_url("periodos");?>"
+                href="periodos"
               >
                 <svg
                   class="w-5 h-5"
@@ -651,7 +651,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="<?= route_to('cerrar_sesion_admin') ?>"
+                        href="#"
                       >
                         <svg
                           class="w-4 h-4 mr-3"
@@ -667,7 +667,7 @@
                             d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                           ></path>
                         </svg>
-                        <span>Cerrar sesión</span>
+                        <span>Log out</span>
                       </a>
                     </li>
                   </ul>
