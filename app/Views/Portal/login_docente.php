@@ -47,7 +47,7 @@
                   <?php
                           $parametros = array('id' => 'form-login-alumno'
                                              );
-                          echo form_open('', $parametros);
+                          echo form_open('logear_administrador', $parametros);
                       ?>
 
                       <label class="block text-sm">
@@ -55,11 +55,11 @@
                         <?php
                             $parametros = array('type' => 'email',
                                                 'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                'id' => 'Correo',
-                                                'name' => 'correo',
+                                                'id' => 'email',
+                                                'name' => 'email',
                                                 'placeholder' => 'example@email.com',
                                                 'required' => '',
-                                                'maxlength' => '10'
+                                                'maxlength' => '40'
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -70,23 +70,19 @@
                         <?php
                             $parametros = array('type' => 'password',
                                                 'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                'id' => 'contrasena',
-                                                'name' => 'contrasena',
+                                                'id' => 'contrasenia',
+                                                'name' => 'contrasenia',
                                                 'placeholder' => '***********',
                                                 'required' => '',
-                                                'maxlength' => '10'
+                                                'maxlength' => '30'
                                                 );
                             echo form_input($parametros);
                         ?>
                       </label>
 
-                      <a
+                      <input type="submit" value="Ingresar"
                         class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-                        href="<?= base_url("dashboard");?>"
                       >
-
-                        Iniciar sesión
-                      </a>
 
                       <hr class="my-8" />
 

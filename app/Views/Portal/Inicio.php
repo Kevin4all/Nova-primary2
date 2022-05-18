@@ -117,7 +117,7 @@
                             <div class="service-cap">
                             <h4><a href="#">Ingresar como docente</a></h4>
                                 <div class="boton">
-                                    <a href="login_docente">Iniciar sesión</a>
+                                    <a href="<?= route_to('login_docente')?>">Iniciar sesión</a>
                                 </div>
                                 <div class="caja12"></div>
                             </div>
