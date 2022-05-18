@@ -45,7 +45,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="<?= base_url('recursos_panel/public/cards.html')?>"
+                href="<?= base_url("dashboard");?>"
               >
                 <svg
                   class="w-5 h-5"
@@ -68,7 +68,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="periodos"
+                href="<?= base_url("periodos");?>"
               >
                 <svg
                   class="w-5 h-5"
@@ -89,7 +89,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="<?= base_url('recursos_panel/public/buttons.html')?>"
+                href="#"
               >
                 <svg
                   class="w-5 h-5"
@@ -114,7 +114,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="<?= base_url('recursos_panel/public/forms.html')?>"
+                href="#"
               >
                 <svg
                   class="w-5 h-5"
