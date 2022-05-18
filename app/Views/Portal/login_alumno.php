@@ -85,7 +85,7 @@
                         href="<?= base_url('recursos_panel/public/index.html');?>"
                       >
 
-                        Log in
+                        Iniciar sesión
                       </a>
 
                       <hr class="my-8" />

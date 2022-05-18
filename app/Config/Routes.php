@@ -35,6 +35,7 @@ $routes->get('/', 'Portal/Inicio::index');
 // $routes->get('/inicio', 'Portal/Inicio::index', ['as' => 'inicio']);
 $routes->get('/login_alumno', 'Portal/Login_alumno::index', ['as' => 'login_alumno']);
 $routes->get('/login_docente', 'Portal/Login_docente::index', ['as' => 'login_docente']);
+$routes->get('/dashboard', 'Panel/dashboard::index', ['as' => 'dashboard']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
