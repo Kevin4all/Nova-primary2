@@ -23,7 +23,7 @@
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/style.css"); ?>">
             <style>
                 .centercaja{
-                    margin-left: 15% !important;
+                    margin-left: 0 !important;
                 }
                 .text-center{
                     text-align: center;
@@ -72,6 +72,21 @@
                 .sky-blue {
                     background: #f9fafb;
                 }
+                .header{
+                    width: 100%;
+                    height: 40px;
+                    background-color: white;
+                }
+                .usuario{
+                    text-align: right;
+                    padding: 10px;
+                }
+
+                .usuario > li{
+                    float: none;
+                    display: inline-block;
+                }
+
             </style>
    </head>
 
@@ -79,47 +94,60 @@
        
         <!-- Best Features End -->
         <!-- Services Area Start -->
+        <header class="header">
+            <nav>
+                <ul class="usuario">
+                    <li class="pull-left"><a href="#"></a>Darien Perez Cano</li>
+                </ul>
+            </nav>
+        </header>
         <section class="service-area sky-blue section-padding2 pt-0 cjas2">
             <div class="container mt-">
                 <!-- Section Tittle -->
                 <div class="row espacio d-flex justify-content-center pt-4">
                     <div class="col-lg-6">
                         <div class="text-center">
-                            <b><h1 class="titulo">Recursamientos</h1></b>
+                            <b><h1 class="titulo">Tramites de recursamiento</h1></b>
                             
                         </div>
                     </div>
                 </div>
                 <!-- Section caption -->
                 <div class="row cajas">
-                    <div class="col-xl-4 col-lg-4 col-md-6 centercaja">
+                    <div class="col-xl-4 col-lg-4 col-md-4 centercaja">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
                             </div> 
                             <div class="service-cap">
-                                <h4><a href="#">Ingresar como alumno</a></h4>
-                                <div class="boton">
-                                    <a href="login_alumno">Iniciar sesión</a>
-                                </div>
-                                <div class="botondos">
-                                    <a class="resgistrar1" href="#">Registrarse</a>
-                                </div>
+                                <h4><a href="#">Generar soliciud</a></h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="services-caption text-center mb-30">
+                            <div class="service-icon">
+                                <span class="flaticon-businessman"></span>
+                            </div> 
+                            <div class="service-cap">
+                            <h4><a href="#">Seleccionar materias</a></h4>
+                                
+                                
                             </div>
                         </div>
                     </div>
                      
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
-                                <span class="flaticon-plane"></span>
+                                <span class="flaticon-businessman"></span>
                             </div> 
                             <div class="service-cap">
-                            <h4><a href="#">Ingresar como docente</a></h4>
-                                <div class="boton">
-                                    <a href="#">Iniciar sesión</a>
-                                </div>
-                                <div class="caja12"></div>
+                            <h4><a href="#">Ver reporte</a></h4>
+
+                                
                             </div>
                         </div>
                     </div>
