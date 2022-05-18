@@ -54,7 +54,33 @@
                         <span class="text-gray-700 dark:text-gray-400">Nombre <br></span>
                                               <?php
                                       $parametros = array('type' => 'text',
-                                                          'class' => 'form-control validate',
+                                      'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                          'id' => 'apellidom',
+                                                          'name' => 'apellidom'
+                                                          );
+                                      echo form_input($parametros);
+                                  ?>
+                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
+                      </label>
+
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Apellido Paterno <br></span>
+                                              <?php
+                                      $parametros = array('type' => 'text',
+                                      'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                          'id' => 'apellidom',
+                                                          'name' => 'apellidom'
+                                                          );
+                                      echo form_input($parametros);
+                                  ?>
+                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
+                      </label>
+
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Apellido Materno <br></span>
+                                              <?php
+                                      $parametros = array('type' => 'text',
+                                      'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
                                                           'id' => 'apellidom',
                                                           'name' => 'apellidom'
                                                           );
@@ -114,6 +140,22 @@
                             Femenino
                       </label>
                       <br>
+
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Teléfono</span>
+                        <?php
+                            $parametros = array('type' => 'text',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'telefono',
+                                                'name' => 'telefono',
+                                                'placeholder' => '55123456789',
+                                                'required' => '',
+                                                'maxlength' => '10'
+                                                );
+                            echo form_input($parametros);
+                        ?>
+                      </label>
+
                       <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Contraseña</span>
                         <?php
