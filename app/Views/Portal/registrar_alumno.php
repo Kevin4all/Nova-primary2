@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Windmill Dashboard</title>
+    <title>Registro Alumno</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -41,15 +41,27 @@
               <h1
                 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
               >
-                Iniciar sesión alumno
+                Crear  Cuenta
               </h1>
-
               <div action="" method="post" class="tm-login-form">
                   <?php
                           $parametros = array('id' => 'form-login-alumno'
                                              );
-                          echo form_open('logear_alumno', $parametros);
+                          echo form_open('registrar_alumno', $parametros);
                       ?>
+
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Nombre <br></span>
+                                              <?php
+                                      $parametros = array('type' => 'text',
+                                                          'class' => 'form-control validate',
+                                                          'id' => 'apellidom',
+                                                          'name' => 'apellidom'
+                                                          );
+                                      echo form_input($parametros);
+                                  ?>
+                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
+                      </label>
 
                       <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Matricula</span>
@@ -67,6 +79,42 @@
                       </label>
 
                       <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Correo</span>
+                        <?php
+                            $parametros = array('type' => 'email',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'correo',
+                                                'name' => 'correo',
+                                                'placeholder' => 'example@email.com',
+                                                'required' => '',
+                                                'maxlength' => ''
+                                                );
+                            echo form_input($parametros);
+                        ?>
+                      </label>
+
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Sexo <br></span>
+                        <?php
+                                $parametros = array('id' => 'masculino',
+                                                    'name' => 'sexo'
+                                                    );
+                                echo form_radio($parametros);
+                            ?>
+                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
+                            Masculino
+                            <br>
+                            <?php
+                                $parametros = array('id' => 'femenino',
+                                                    'name' => 'sexo'
+                                                    );
+                                echo form_radio($parametros);
+                            ?>
+                            <!-- <input type="radio" id="sexo" value="F" name="sexo"/>  -->
+                            Femenino
+                      </label>
+                      <br>
+                      <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Contraseña</span>
                         <?php
                             $parametros = array('type' => 'password',
@@ -81,7 +129,7 @@
                         ?>
                       </label>
 
-                      <input type="submit" value="Ingresar"
+                      <input type="submit" value="Crear cuenta"
                         class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                       >
 
@@ -95,26 +143,24 @@
                           Olvidaste tu contraseña?
                         </a>
                       </p> -->
-                      <p class="mt-1">
-                        <a
-                          class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
-                          href="<?= base_url('registrar_alumno')?>"
-                        >
-                          Crear cuenta
-                        </a>
-                      </p>
                   <?= form_close() ?>
                 </div>
 
-              <!-- You should use a button here, as the anchor is only used for the example  -->
+              <hr class="my-8" />
+
+              <p class="mt-4">
+                <a
+                  class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
+                  href="<?= base_url('login_alumno')?>"
+                >
+                  Ya tienes una cuenta? Inicia Sesión
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="<?= base_url('recursos/jquery-3.6.0.min.js');?>"></script>
-    <script src="<?= base_url('recursos/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
-
-	<script><?= imprimir_mensaje() ?></script>
+  </body>
   </body>
 </html>

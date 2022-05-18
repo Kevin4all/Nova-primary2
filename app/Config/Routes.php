@@ -35,6 +35,9 @@ $routes->get('/', 'Portal/Inicio::index');
 // $routes->get('/inicio', 'Portal/Inicio::index', ['as' => 'inicio']);
 $routes->get('/login_alumno', 'Portal/Login_alumno::index', ['as' => 'login_alumno']);
 $routes->post('/logear_alumno', 'Portal/Login_alumno::comprobar_alumno', ['as' => 'logear_alumno']);
+
+$routes->get('/registrar_alumno', 'Portal/Registrar_alumno::index', ['as' => 'registrar_alumno']);
+
 $routes->get('/cerrar_sesion_admin', 'Portal/Cerrar_sesion_admin::index', ['as' => 'cerrar_sesion_admin']);
 $routes->get('/login_docente', 'Portal/Login_docente::index', ['as' => 'login_docente']);
 $routes->post('/logear_administrador', 'Portal/Login_docente::comprobar_alumno', ['as' => 'logear_administrador']);

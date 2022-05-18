@@ -103,7 +103,7 @@
                                     <a href="login_alumno">Iniciar sesión</a>
                                 </div>
                                 <div class="botondos">
-                                    <a class="resgistrar1" href="#">Registrarse</a>
+                                    <a class="resgistrar1" href="<?= base_url('/registrar_alumno')?>">Registrarse</a>
                                 </div>
                             </div>
                         </div>

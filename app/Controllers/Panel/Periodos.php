@@ -9,10 +9,10 @@ class Periodos extends BaseController{
         return view('Panel/periodos', $this->cargar_datos());
     }
 
-    private function cargar_datos(){
-        $datos = array();
-        return $datos;
-
-    }//end cargar_datos
+    // private function cargar_datos(){
+    //     $datos = array();
+    //     return $datos;
+    //
+    // }//end cargar_datos
 
 }//end class inicio
