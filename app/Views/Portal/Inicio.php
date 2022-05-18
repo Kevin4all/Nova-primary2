@@ -55,7 +55,7 @@
                     margin-top: 10px;
                     width: 60%;
                     padding: 4px;
-                    border-radius:10px; 
+                    border-radius:10px;
                     border: 2px solid gray;
                     color: black;
                 }
@@ -76,7 +76,7 @@
    </head>
 
    <body>
-       
+
         <!-- Best Features End -->
         <!-- Services Area Start -->
         <section class="service-area sky-blue section-padding2 pt-0 cjas2">
@@ -86,7 +86,7 @@
                     <div class="col-lg-6">
                         <div class="text-center">
                             <b><h1 class="titulo">Recursamientos</h1></b>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
-                            </div> 
+                            </div>
                             <div class="service-cap">
                                 <h4><a href="#">Ingresar como alumno</a></h4>
                                 <div class="boton">
@@ -108,16 +108,16 @@
                             </div>
                         </div>
                     </div>
-                     
+
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-plane"></span>
-                            </div> 
+                            </div>
                             <div class="service-cap">
                             <h4><a href="#">Ingresar como docente</a></h4>
                                 <div class="boton">
-                                    <a href="#">Iniciar sesión</a>
+                                    <a href="login_docente">Iniciar sesión</a>
                                 </div>
                                 <div class="caja12"></div>
                             </div>
@@ -142,12 +142,12 @@
        <!-- Footer End-->
 
    </footer>
-   
+
 	<!-- JS here -->
-	
+
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="<?= base_url("recursos_portal/js/vendor/modernizr-3.5.0.min.js"); ?>"></script>
-		
+
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="<?= base_url("recursos_portal/js/vendor/jquery-1.12.4.min.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/popper.min.js"); ?>"></script>
@@ -169,17 +169,17 @@
         <script src="<?= base_url("recursos_portal/js/jquery.scrollUp.min.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.nice-select.min.js"); ?>"></script>
 		<script src="<?= base_url("recursos_portal/js/jquery.sticky.js"); ?>"></script>
-        
+
         <!-- contact js -->
         <script src="<?= base_url("recursos_portal/js/contact.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.form.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.validate.min.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/mail-script.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.ajaxchimp.min.js"); ?>"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
+
+		<!-- Jquery Plugins, main Jquery -->
         <script src="<?= base_url("recursos_portal/js/plugins.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/main.js"); ?>"></script>
-        
+
     </body>
 </html>
