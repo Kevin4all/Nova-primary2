@@ -12,8 +12,6 @@ class Inicio_alumno extends BaseController{
     private function cargar_datos(){
         $datos = array();
 
-        $tabla_alumnos = new \App\Models\Tabla_alumnos;
-        $datos['alumnos'] = $tabla_alumnos->obtener_camionetas_panel();
 
         return $datos;
 
