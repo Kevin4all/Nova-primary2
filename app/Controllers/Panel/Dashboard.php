@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers\Portal;
+namespace App\Controllers\Panel;
 use \App\Controllers\BaseController;
 
-class Login_docente extends BaseController{
+class Dashboard extends BaseController{
 
     public function index(){
-        return view('Portal/login_docente', $this->cargar_datos());
+        return view('Panel/dashboard', $this->cargar_datos());
     }
 
     private function cargar_datos(){

@@ -85,7 +85,7 @@
                         href="<?= route_to('inicio_alumno');?>"
                       >
 
-                        Log in
+                        Iniciar sesión
                       </a>
 
                       <hr class="my-8" />
