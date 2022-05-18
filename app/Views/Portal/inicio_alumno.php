@@ -107,7 +107,7 @@
         <header class="header">
             <nav>
                 <ul class="usuario">
-                    <li class="pull-left"><a href="#"></a>Darien Perez Cano</li>
+                    <li class="pull-left"><a href="#"></a><?= $nombre_completo ?></li>
                     <li class=""><a href="<?= route_to('cerrar_sesion_alumno')?>" class="btn card-btn1">Cerrar sesión</a></li>
                 </ul>
             </nav>
