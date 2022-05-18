@@ -18,5 +18,5 @@ class Tabla_alumnos extends Model{
                           ->first();
         return $resultado;
     }//end logear_alumno
-
+    
 }//End Model alumnos

@@ -11,6 +11,16 @@ class Inicio_alumno extends BaseController{
 
     private function cargar_datos(){
         $datos = array();
+
+        $session = session();
+        $datos['nombre'] = $session->nombre;
+        $datos['ap_paterno'] = $session->ap_paterno;
+        $datos['ap_materno'] = $session->ap_materno;
+
+        $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
+
+        //dd($datos);
+
         return $datos;
 
     }//end cargar_datos
