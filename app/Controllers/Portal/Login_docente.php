@@ -31,6 +31,7 @@ class Login_docente extends BaseController{
 			return redirect()->to(route_to('dashboard'));
 		}//end if existe el alumno
 		else{
+			crear_mensaje_usuario('Correo electrónico o contraseña incorrecta.', 'Introduzca de nuevo las credenciales de inicio de sesión para poder acceder.', 'error');
 			return redirect()->to(route_to('login_docente'));
 		}//end else existe el alumno
 	}//end comprobar_alumno
