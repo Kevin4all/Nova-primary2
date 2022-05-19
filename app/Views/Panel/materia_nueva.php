@@ -29,7 +29,8 @@
                                                 'id' => 'nombre',
                                                 'name' => 'nombre',
                                                 'placeholder' => 'Nombre',
-                                                'value' => ''
+                                                'value' => '',
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -44,7 +45,8 @@
                                                 'id' => 'siglas',
                                                 'name' => 'siglas',
                                                 'placeholder' => 'Siglas',
-                                                'value' => ''
+                                                'value' => '',
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -59,7 +61,8 @@
                                                 'name' => 'creditos',
                                                 'placeholder' => 'Creditos',
                                                 'min' => 1,
-                                                'value' => ''
+                                                'value' => '',
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -74,9 +77,10 @@
                                                 'id' => 'cuatrimestre',
                                                 'name' => 'cuatrimestre',
                                                 'placeholder' => '1',
-                                                'value' => '1',
+                                                'value' => '',
                                                 'min'=> '1',
-                                                'max'=> '9'
+                                                'max'=> '9',
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>

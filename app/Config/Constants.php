@@ -60,6 +60,8 @@ define("TAREA_MATERIA_DETALLES", "materia_detalles");
 
 //PERIODOS
 define("TAREA_PERIODOS", "periodos");
+define("TAREA_PERIODO_NUEVO", "periodo_nuevo");
+define("TAREA_PERIODO_DETALLES", "periodo_detalles");
 
 //ASIGNACIONES
 define("TAREA_ASIGNACIONES", "asignaciones");

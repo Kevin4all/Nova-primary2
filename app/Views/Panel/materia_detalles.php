@@ -29,7 +29,8 @@
                                                 'id' => 'nombre',
                                                 'name' => 'nombre',
                                                 'placeholder' => 'Nombre',
-                                                'value' => $materia->nombre
+                                                'value' => $materia->nombre,
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -44,7 +45,8 @@
                                                 'id' => 'siglas',
                                                 'name' => 'siglas',
                                                 'placeholder' => 'Siglas',
-                                                'value' => $materia->siglas
+                                                'value' => $materia->siglas,
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                             $parametros = array('type' => 'hidden',
@@ -65,7 +67,8 @@
                                                 'name' => 'creditos',
                                                 'placeholder' => 'Creditos',
                                                 'min' => 1,
-                                                'value' => $materia->creditos
+                                                'value' => $materia->creditos,
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -80,7 +83,8 @@
                                                 'id' => 'cuatrimestre',
                                                 'name' => 'cuatrimestre',
                                                 'placeholder' => 'Cuatrimestre',
-                                                'value' => $materia->cuatrimestre
+                                                'value' => $materia->cuatrimestre,
+                                                'required' => true
                                                 );
                             echo form_input($parametros);
                         ?>

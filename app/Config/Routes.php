@@ -61,6 +61,13 @@ $routes->post('/dashboard/editar_materia', 'Panel/Materia_detalles::actualizar_m
 
 
 $routes->get('/periodos', 'Panel/Periodos::index', ['as' => 'periodos']);
+$routes->get('/periodos/deletear_periodo/(:num)', 'Panel\Periodos::eliminar_periodo/$1', ['as' => 'deletear_periodo']);
+$routes->get('/periodos/periodo_nuevo', 'Panel/Periodo_nuevo::index', ['as' => 'periodo_nuevo']);
+$routes->post('/periodos/insertar_periodo', 'Panel/Periodo_nuevo::insertar_periodo', ['as' => 'insertar_periodo']);
+$routes->get('/periodos/detalles_periodo/(:num)', 'Panel\Periodo_detalles::index/$1', ['as' => 'detalles_periodo']);
+$routes->post('/periodos/editar_periodo', 'Panel/Periodo_detalles::actualizar_periodo', ['as' => 'editar_periodo']);
+
+
 $routes->get('/asignaciones', 'Panel/Asignaciones::index', ['as' => 'asignaciones']);
 $routes->get('/alumnos', 'Panel/Alumnos::index', ['as' => 'alumnos']);
 $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
