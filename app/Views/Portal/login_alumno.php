@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="<?= base_url('recursos_panel/public/assets/css/tailwind.output.css');?>" />
-    <link rel="stylesheet" href="<?= base_url('recursos/toast/dist/css/iziToast.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('recursos_panel/toast/dist/css/iziToast.min.css') ?>">
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -106,8 +106,8 @@
         </div>
       </div>
     </div>
-    <script src="<?= base_url('recursos/jquery-3.6.0.min.js');?>"></script>
-    <script src="<?= base_url('recursos/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
+    <script src="<?= base_url('recursos_panel/jquery-3.6.0.min.js');?>"></script>
+    <script src="<?= base_url('recursos_panel/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
 
 	<script><?= imprimir_mensaje() ?></script>
   </body>
