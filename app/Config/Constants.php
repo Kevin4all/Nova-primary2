@@ -57,6 +57,18 @@ define("TAREA_DASHBOARD", "dashboard");
 //MATERIAS
 define("TAREA_MATERIAS", "materias");
 
+//PERIODOS
+define("TAREA_PERIODOS", "periodos");
+
+//ASIGNACIONES
+define("TAREA_ASIGNACIONES", "asignaciones");
+
+//ALUMNOS
+define("TAREA_ALUMNOS", "alumnos");
+
+//LISTAS
+define("TAREA_LISTAS", "listas");
+
 /*
  | --------------------------------------------------------------------------
  | Exit Status Codes
