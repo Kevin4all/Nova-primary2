@@ -4,7 +4,18 @@ namespace App\Controllers\Panel;
 
 use \App\Controllers\BaseController;
 
+use Dompdf\Dompdf;
+
 class Listas extends BaseController{
+
+    public function demoPDF()
+    {
+      $dompdf = new Dompdf();
+      $dompdf->loadHTML(view('Panel/platillapdf'));
+      $dompdf->setPaper('A4', 'portrait');
+      $dompdf->render();
+      $dompdf->stream();
+    }
 
     public function index(){
         return $this->crear_vista('Panel/listas', $this->cargar_datos());
