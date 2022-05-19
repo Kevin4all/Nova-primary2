@@ -52,7 +52,14 @@ $routes->post('/insertar_solicitud', 'Portal/Nueva_solicitud::insertar_solicitud
 
 $routes->get('/inicio_alumno', 'Portal/Inicio_alumno::index', ['as' => 'inicio_alumno']);
 
-$routes->get('/dashboard', 'Panel/dashboard::index', ['as' => 'dashboard']);
+$routes->get('/dashboard', 'Panel/Dashboard::index', ['as' => 'dashboard']);
+$routes->get('/dashboard/deletear_materia/(:num)', 'Panel\Dashboard::eliminar_materia/$1', ['as' => 'deletear_materia']);
+$routes->get('/dashboard/materia_nueva', 'Panel/Materia_nueva::index', ['as' => 'materia_nueva']);
+$routes->post('/dashboard/insertar_materia', 'Panel/Materia_nueva::insertar_materia', ['as' => 'insertar_materia']);
+$routes->get('/dashboard/detalles_materia/(:num)', 'Panel\Materia_detalles::index/$1', ['as' => 'detalles_materia']);
+$routes->post('/dashboard/editar_materia', 'Panel/Materia_detalles::actualizar_materia', ['as' => 'editar_materia']);
+
+
 $routes->get('/periodos', 'Panel/Periodos::index', ['as' => 'periodos']);
 $routes->get('/asignaciones', 'Panel/Asignaciones::index', ['as' => 'asignaciones']);
 $routes->get('/alumnos', 'Panel/Alumnos::index', ['as' => 'alumnos']);

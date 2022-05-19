@@ -47,15 +47,16 @@ define("SEXO_MASCULINO", "M");
 
 define("SEXO_FEMENINO", "F");
 
+define("SEXOS", array('F' => 'Femenino', 'M' => 'Masculino'));
+
 //******************************************************************************
 //******************* TAREAS DEL PANEL DE ADMINISTRACIÓN ***********************
 //******************************************************************************
 
 //DASHBOARD
 define("TAREA_DASHBOARD", "dashboard");
-
-//MATERIAS
-define("TAREA_MATERIAS", "materias");
+define("TAREA_MATERIA_NUEVA", "materia_nueva");
+define("TAREA_MATERIA_DETALLES", "materia_detalles");
 
 //PERIODOS
 define("TAREA_PERIODOS", "periodos");

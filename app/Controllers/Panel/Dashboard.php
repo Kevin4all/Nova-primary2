@@ -20,6 +20,9 @@ class Dashboard extends BaseController{
 
         $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
 
+        $tabla_materias = new \App\Models\Tabla_materias;
+        $datos['materias'] = $tabla_materias->obtener_materias_panel();
+
         $datos['nombre_pestania'] = 'Dashboard';
 
         return $datos;
@@ -29,5 +32,18 @@ class Dashboard extends BaseController{
         $contenido['menu'] = generar_menu_panel_administrativo_navegacion(TAREA_DASHBOARD);
         return view($nombre_vista, $contenido);
     }//end crear_vista
+
+
+    public function eliminar_materia($id_materia = 0){
+        $tabla_materias = new \App\Models\Tabla_materias;
+        if ($tabla_materias->delete($id_materia)) {
+            crear_mensaje_usuario('Eliminación Exitosa.', 'Se ha eliminado correctamente a la materia.', 'success');
+            return redirect()->to(route_to('dashboard', $id_materia));
+        }
+        else {
+            crear_mensaje_usuario('No se eliminó a la materia.', 'Hubo un error con nuestro servidor y no se eliminó la materia, intenta nuevamente, por favor.', 'error');
+            return redirect()->to(route_to('dashboard', $id_materia));
+        }
+    }//end eliminar_materia
 
 }//End Class Dashboard
