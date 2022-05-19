@@ -31,11 +31,12 @@ class Registrar_alumno extends BaseController{
         $alumno['cuatrimestre_original'] = $this->request->getPost('cuatri_original');
         $alumno['grupo_original'] = $this->request->getPost('grupo_a');
         if (($tabla_alumnos->insert($alumno))>0) {
+          crear_mensaje_usuario('Registro Exitoso.', 'Se ha registrado correctamente a tu usuario.', 'success');
           return redirect()->to(route_to('login_alumno'));
         }//end if inserta alumno a DB
         else {
+          crear_mensaje_usuario('No se registro al usuario.', 'Hubo un error con nuestro servidor y no se registro tu usuario, intenta nuevamente, por favor.', 'error');
           return redirect()->to(route_to('registrar_alumno'));
-          // code...
         }
       }
 
