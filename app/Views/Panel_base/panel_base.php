@@ -473,5 +473,14 @@
         </main>
       </div>
     </div>
+    <script src="<?= base_url('recursos_panel/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
+
+	<script><?= imprimir_mensaje() ?></script>
+
+	<!-- ********************************************************** -->
+	<!-- *************** JS ESPECÍFICOS DE LA VISTA *************** -->
+	<?= $this->renderSection("js") ?>
+	<!-- ********************************************************** -->
+	<!-- ********************************************************** -->
   </body>
 </html>
