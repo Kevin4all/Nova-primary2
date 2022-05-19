@@ -49,7 +49,7 @@
 							echo '
 							<tr>
                                 <td>'.++$num.'</td>
-                                <td>'.$periodo->nombre.'</td>
+                                <td>'.$periodo->nombre_periodo.'</td>
                                 <td>'.$periodo->anio.'</td>
 								<td>
 									<a href="'.route_to('detalles_periodo', $periodo->id_periodo).'" type="button" class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Editar</a>

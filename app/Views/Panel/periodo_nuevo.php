@@ -26,8 +26,8 @@
                 <?php
                             $parametros = array('type' => 'text',
                                                 'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                'id' => 'nombre',
-                                                'name' => 'nombre',
+                                                'id' => 'nombre_periodo',
+                                                'name' => 'nombre_periodo',
                                                 'placeholder' => 'Nombre',
                                                 'value' => '',
                                                 'required' => true

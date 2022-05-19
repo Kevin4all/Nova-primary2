@@ -33,7 +33,7 @@ class Periodo_nuevo extends BaseController{
     public function insertar_periodo(){
         $tabla_periodos = new \App\Models\Tabla_periodos;
         $periodo = array();
-        $periodo['nombre'] = $this->request->getPost('nombre');
+        $periodo['nombre_periodo'] = $this->request->getPost('nombre_periodo');
         $periodo['anio'] = $this->request->getPost('anio');
         if (($tabla_periodos->insert($periodo))>0) {
             crear_mensaje_usuario('Registro Exitoso.', 'Se ha registrado correctamente al periodo.', 'success');
