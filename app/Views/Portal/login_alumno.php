@@ -14,7 +14,7 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="<?= base_url('recursos_panel/public/assets/js/init-alpine.js');?>"></script>
+    <script src="<?= base_url('recursos_panel/public/assets/js/init-alpine.js');?>"> </script>
   </head>
   <body>
     <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">

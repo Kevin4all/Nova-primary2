@@ -27,7 +27,7 @@ class Login_alumno extends BaseController{
 			$session->set('ap_paterno', $datos_alumnos->ap_paterno);
 			$session->set('ap_materno', $datos_alumnos->ap_materno);
 			$session->set('email', $datos_alumnos->email);
-            $session->set('telefono', $datos_alumnos->telefono);
+      $session->set('telefono', $datos_alumnos->telefono);
 			$session->set('sexo', $datos_alumnos->sexo);
 			$session->set('cuatrimestre_original', $datos_alumnos->cuatrimestre_original);
 			$session->set('grupo_original', $datos_alumnos->grupo_original);
