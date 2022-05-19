@@ -13,6 +13,13 @@ class Periodos extends BaseController{
     private function cargar_datos(){
         //Todos los datos de la vista (modelos, nombre de la página, etc.)
 
+        $session = session();
+        $datos['nombre'] = $session->nombre;
+        $datos['ap_paterno'] = $session->ap_paterno;
+        $datos['ap_materno'] = $session->ap_materno;
+
+        $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
+
         $datos['nombre_pestania'] = 'Periodos';
 
         return $datos;
