@@ -47,6 +47,16 @@ define("SEXO_MASCULINO", "M");
 
 define("SEXO_FEMENINO", "F");
 
+//******************************************************************************
+//******************* TAREAS DEL PANEL DE ADMINISTRACIÓN ***********************
+//******************************************************************************
+
+//DASHBOARD
+define("TAREA_DASHBOARD", "dashboard");
+
+//MATERIAS
+define("TAREA_MATERIAS", "materias");
+
 /*
  | --------------------------------------------------------------------------
  | Exit Status Codes
