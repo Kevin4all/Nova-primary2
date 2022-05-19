@@ -40,7 +40,7 @@ $routes->get('/registrar_alumno', 'Portal/Registrar_alumno::index', ['as' => 're
 $routes->post('/insertar_alumno', 'Portal/Registrar_alumno::insertar_alumno', ['as' => 'insertar_alumno']);
 
 $routes->get('/cerrar_sesion_admin', 'Portal/Cerrar_sesion_admin::index', ['as' => 'cerrar_sesion_admin']);
-$routes->get('/login_docente', 'Portal/Login_docente::index', ['as' => 'login_docente']);
+$routes->get('/login_admin', 'Portal/Login_docente::index', ['as' => 'login_docente']);
 $routes->post('/logear_administrador', 'Portal/Login_docente::comprobar_alumno', ['as' => 'logear_administrador']);
 $routes->get('/cerrar_sesion_alumno', 'Portal/Cerrar_sesion_alumno::index', ['as' => 'cerrar_sesion_alumno']);
 

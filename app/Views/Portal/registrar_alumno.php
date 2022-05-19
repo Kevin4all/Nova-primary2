@@ -175,6 +175,12 @@
                       <input type="submit" value="Crear cuenta"
                         class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                       >
+                      <a
+                        class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
+                        href="<?= route_to('/')?>"
+                      >
+                        Cancelar
+                      </a>
                   <?= form_close() ?>
                 </div>
 
