@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Windmill Dashboard</title>
+    <title>Iniciar sesión alumno</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -88,14 +88,6 @@
 
                       <hr class="my-8" />
 
-                      <!-- <p class="mt-4">
-                        <a
-                          class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
-                          href="./forgot-password.html"
-                        >
-                          Olvidaste tu contraseña?
-                        </a>
-                      </p> -->
                       <p class="mt-1">
                         <a
                           class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
