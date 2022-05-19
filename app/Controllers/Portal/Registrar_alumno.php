@@ -15,4 +15,28 @@ class Registrar_alumno extends BaseController{
 
     }//end cargar_datos
 
+    public function insertar_alumno(){
+      // d($this->request->getPost());
+      // dd($this->request->getFile('imagen_perfil'));
+      $tabla_alumnos = new \App\Models\Tabla_alumnos;
+      $alumno = array();
+        $alumno['nombre'] = $this->request->getPost('nombre_alumno');
+        $alumno['ap_paterno'] = $this->request->getPost('apellidop');
+        $alumno['ap_materno'] = $this->request->getPost('apellidom');
+        $alumno['contrasenia'] = $this->request->getPost('contrasenia');
+        $alumno['matricula'] = $this->request->getPost('matricula');
+        $alumno['email'] = $this->request->getPost('correo_alumno');
+        $alumno['telefono'] = $this->request->getPost('telefono');
+        $alumno['sexo'] = $this->request->getPost('sexo');
+        $alumno['cuatrimestre_original'] = $this->request->getPost('cuatri_original');
+        $alumno['grupo_original'] = $this->request->getPost('grupo_a');
+        if (($tabla_alumnos->insert($alumno))>0) {
+          return redirect()->to(route_to('login_alumno'));
+        }//end if inserta alumno a DB
+        else {
+          return redirect()->to(route_to('registrar_alumno'));
+          // code...
+        }
+      }
+
 }//end class inicio_alumno

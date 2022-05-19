@@ -45,48 +45,50 @@
               </h1>
               <div action="" method="post" class="tm-login-form">
                   <?php
-                          $parametros = array('id' => 'form-login-alumno'
+                          $parametros = array('id' => 'formulario-registrar-alumno'
                                              );
-                          echo form_open('registrar_alumno', $parametros);
+                          echo form_open_multipart('insertar_alumno',$parametros);
                       ?>
-
                       <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Nombre <br></span>
+                        <span class="text-gray-700 dark:text-gray-400">Nombre(s)<br></span>
                                               <?php
                                       $parametros = array('type' => 'text',
-                                      'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                          'id' => 'apellidom',
-                                                          'name' => 'apellidom'
+                                                          'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                          'id' => 'nombre_alumno',
+                                                          'name' => 'nombre_alumno',
+                                                          'placeholder' => 'Nombre(s)',
+                                                          'required' => ''
                                                           );
                                       echo form_input($parametros);
                                   ?>
-                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
                       </label>
 
                       <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Apellido Paterno <br></span>
                                               <?php
                                       $parametros = array('type' => 'text',
-                                      'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                          'id' => 'apellidom',
-                                                          'name' => 'apellidom'
+                                                          'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                          'id' => 'apellidop',
+                                                          'name' => 'apellidop',
+                                                          'placeholder' => 'Apellido Paterno',
+                                                          'required' => ''
                                                           );
                                       echo form_input($parametros);
                                   ?>
-                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
                       </label>
 
                       <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Apellido Materno <br></span>
                                               <?php
                                       $parametros = array('type' => 'text',
-                                      'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                          'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
                                                           'id' => 'apellidom',
-                                                          'name' => 'apellidom'
+                                                          'name' => 'apellidom',
+                                                          'placeholder' => 'Apellido Materno',
+                                                          'required' => ''
                                                           );
                                       echo form_input($parametros);
                                   ?>
-                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
                       </label>
 
                       <label class="block text-sm">
@@ -109,8 +111,8 @@
                         <?php
                             $parametros = array('type' => 'email',
                                                 'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                'id' => 'correo',
-                                                'name' => 'correo',
+                                                'id' => 'correo_alumno',
+                                                'name' => 'correo_alumno',
                                                 'placeholder' => 'example@email.com',
                                                 'required' => '',
                                                 'maxlength' => ''
@@ -125,20 +127,49 @@
                                 $parametros = array('id' => 'masculino',
                                                     'name' => 'sexo'
                                                     );
-                                echo form_radio($parametros);
+                                echo form_radio($parametros, SEXO_MASCULINO);
                             ?>
-                            <!-- <input type="radio" id="sexo" value="M" name="sexo"/>  -->
                             Masculino
                             <br>
                             <?php
                                 $parametros = array('id' => 'femenino',
                                                     'name' => 'sexo'
                                                     );
-                                echo form_radio($parametros);
+                                echo form_radio($parametros, SEXO_FEMENINO);
                             ?>
-                            <!-- <input type="radio" id="sexo" value="F" name="sexo"/>  -->
                             Femenino
                       </label>
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Cuatrimestre Original</span>
+                        <?php
+                            $parametros = array('type' => 'number',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'cuatri_original',
+                                                'name' => 'cuatri_original',
+                                                'placeholder' => '1',
+                                                'required' => '',
+                                                'max' => '9',
+                                                'min' => '1'
+                                                );
+                            echo form_input($parametros);
+                        ?>
+                      </label>
+
+                      <label class="block text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Grupo <br></span>
+                                              <?php
+                                      $parametros = array('type' => 'text',
+                                                          'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                          'id' => 'grupo_a',
+                                                          'name' => 'grupo_a',
+                                                          'placeholder' => 'A',
+                                                          'required' => '',
+                                                          'maxlength' => '1'
+                                                          );
+                                      echo form_input($parametros);
+                                  ?>
+                      </label>
+
                       <br>
 
                       <label class="block text-sm">
@@ -148,7 +179,7 @@
                                                 'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
                                                 'id' => 'telefono',
                                                 'name' => 'telefono',
-                                                'placeholder' => '55123456789',
+                                                'placeholder' => '1234567890',
                                                 'required' => '',
                                                 'maxlength' => '10'
                                                 );
@@ -174,17 +205,6 @@
                       <input type="submit" value="Crear cuenta"
                         class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
                       >
-
-                      <hr class="my-8" />
-
-                      <!-- <p class="mt-4">
-                        <a
-                          class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
-                          href="./forgot-password.html"
-                        >
-                          Olvidaste tu contraseña?
-                        </a>
-                      </p> -->
                   <?= form_close() ?>
                 </div>
 
