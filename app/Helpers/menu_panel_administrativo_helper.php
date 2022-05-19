@@ -59,6 +59,8 @@ function activar_seccion_menu_panel_administrativo($seccion_a_activar = NULL, $m
         break;
         //SECCIÓN PERIODOS
         case TAREA_PERIODOS:
+        case TAREA_PERIODO_NUEVO:
+        case TAREA_PERIODO_DETALLES:
             $menu['periodos']['is_active'] = TRUE;
         break;
         //SECCIÓN ASIGNACIONES
