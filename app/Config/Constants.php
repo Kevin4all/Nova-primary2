@@ -76,6 +76,7 @@ define("TAREA_PERIODO_DETALLES", "periodo_detalles");
 
 //ASIGNACIONES
 define("TAREA_ASIGNACIONES", "asignaciones");
+define("TAREA_ASIGNACION_NUEVA", "asignacion_nueva");
 
 //ALUMNOS
 define("TAREA_ALUMNOS", "alumnos");

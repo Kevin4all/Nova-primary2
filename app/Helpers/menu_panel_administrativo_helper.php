@@ -65,6 +65,7 @@ function activar_seccion_menu_panel_administrativo($seccion_a_activar = NULL, $m
         break;
         //SECCIÓN ASIGNACIONES
         case TAREA_ASIGNACIONES:
+        case TAREA_ASIGNACION_NUEVA:
             $menu['asignaciones']['is_active'] = TRUE;
         break;
         //SECCIÓN ALUMNOS

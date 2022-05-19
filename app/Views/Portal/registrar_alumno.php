@@ -26,13 +26,13 @@
             <img
               aria-hidden="true"
               class="object-cover w-full h-full dark:hidden"
-              src="<?= base_url('Imagenes/Portal/Login_alumno.jpg');?>"
+              src="<?= base_url('Imagenes/Portal/Registrar_alumno.jpg');?>"
               alt="Office"
             />
             <img
               aria-hidden="true"
               class="hidden object-cover w-full h-full dark:block"
-              src="<?= base_url('Imagenes/Portal/Login_alumno.jpg');?>"
+              src="<?= base_url('Imagenes/Portal/Registrar_alumno.jpg');?>"
               alt="Office"
             />
           </div>

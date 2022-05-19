@@ -23,5 +23,21 @@ class Tabla_materias extends Model{
         return $resultado;
     }//end obtener_materia
 
+    public function generar_dropdown_materias(){
+        $resultado = $this
+                          ->select('id_materia, nombre')
+                          ->findAll();
+        if ($resultado != NULL) {
+            $materias = array();
+            foreach ($resultado as $res) {
+                $materias[$res->id_materia] = $res->nombre;
+            }//end foreach resultado
+            return $materias;
+        }//end if se encontrarón resultados
+        else {
+            return NULL;
+        }//end else se encontrarón resultados
+    }//end generar_dropdown_roles
+
     
 }//End Model alumnos

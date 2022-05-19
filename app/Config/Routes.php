@@ -69,6 +69,10 @@ $routes->post('/periodos/editar_periodo', 'Panel/Periodo_detalles::actualizar_pe
 
 
 $routes->get('/asignaciones', 'Panel/Asignaciones::index', ['as' => 'asignaciones']);
+$routes->get('/asignaciones/deletear_asignacion/(:num)', 'Panel\Asignaciones::eliminar_asignacion/$1', ['as' => 'deletear_asignacion']);
+$routes->get('/asignaciones/asignacion_nueva', 'Panel/Asignacion_nueva::index', ['as' => 'asignacion_nueva']);
+$routes->post('/asignaciones/insertar_asignacion', 'Panel/Asignacion_nueva::insertar_asignacion', ['as' => 'insertar_asignacion']);
+
 $routes->get('/alumnos', 'Panel/Alumnos::index', ['as' => 'alumnos']);
 $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
 $routes->get('/plantillapdf', 'Panel/Pruebapdf::index', ['as' => 'plantillapdf']);

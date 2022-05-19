@@ -39,7 +39,7 @@ class Periodo_detalles extends BaseController{
         $tabla_periodos = new \App\Models\Tabla_periodos;
         $periodo = array();
 
-        $periodo['nombre'] = $this->request->getPost('nombre');
+        $periodo['nombre_periodo'] = $this->request->getPost('nombre_periodo');
         $periodo['anio'] = $this->request->getPost('anio');
         if(($tabla_periodos->update($id_periodo, $periodo))){
             crear_mensaje_usuario('Actualización Exitosa.', 'Se ha actualizado correctamente al periodo.', 'success');

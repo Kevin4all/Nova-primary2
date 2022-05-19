@@ -96,7 +96,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 centercaja">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
-                                <span class="flaticon-businessman"></span>
+                                <span><img src="<?= base_url("Imagenes/estudiante.png")?>"></span>
                             </div>
                             <div class="service-cap">
                                 <h4><a href="#">Alumno</a></h4>
@@ -113,7 +113,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
-                                <span class="flaticon-plane"></span>
+                                <span><img src="<?= base_url("Imagenes/admin.png")?>"></span>
                             </div>
                             <div class="service-cap">
                             <h4><a href="#">Administrador</a></h4>
