@@ -5,7 +5,7 @@ namespace App\Controllers\Panel;
 use \App\Controllers\BaseController;
 
 class Alumnos extends BaseController{
-
+    
     public function index(){
         return $this->crear_vista('Panel/alumnos', $this->cargar_datos());
     }//end index

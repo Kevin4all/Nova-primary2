@@ -3,18 +3,28 @@
 <?= $this->section('css') ?>
 
 <link rel="stylesheet" type="text/css" href="<?= base_url('recursos_panel/plugins/datatables/css/datatables.min.css');?>">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
 <?= $this->endSection() ?>
 
 <?= $this->section('contenido') ?>
-<h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Materias
+<h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+              Alumnos
             </h2>
             <!-- CTA -->
-            
+            <!-- <div class="container mt-5">
+              <div class="d-flex flex-row-reverse bd-highlight">
+                <a class="btn btn-primary" href="<?php echo base_url('pdf_demo') ?>" >
+                  Imprimir
+                </a>
+              </div>
+            </div> -->
+
             <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+
               <div class="w-full overflow-x-auto">
                 <table class="datatable-own display table nowrap table-striped table-hover w-full whitespace-no-wrap">
                 <thead>
@@ -50,6 +60,8 @@
 <?= $this->section('js') ?>
 
 <script src="<?= base_url('recursos_panel/plugins/datatables/js/datatables.min.js');?>"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>s
+<!--datatable Js-->
 
 <script>
     $(document).ready(function() {

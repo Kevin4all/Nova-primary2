@@ -39,12 +39,12 @@ function configurar_menu_panel_administrativo_navegacion(){
     $menu['alumnos'] = $menu_item;
 
     //Sección Listas
-    $menu_item['is_active'] = false;
-    $menu_item['link'] = route_to('listas');
-    $menu_item['icono'] = 'M4 6h16M4 10h16M4 14h16M4 18h16';
-    $menu_item['texto'] = 'Listas';
-    $menu_item['sub_menu'] = array();
-    $menu['listas'] = $menu_item;
+    // $menu_item['is_active'] = false;
+    // $menu_item['link'] = route_to('listas');
+    // $menu_item['icono'] = 'M4 6h16M4 10h16M4 14h16M4 18h16';
+    // $menu_item['texto'] = 'Listas';
+    // $menu_item['sub_menu'] = array();
+    // $menu['listas'] = $menu_item;
 
     return $menu;
 }//end configurar_menu_panel_navegacion
