@@ -44,6 +44,10 @@ $routes->get('/login_docente', 'Portal/Login_docente::index', ['as' => 'login_do
 $routes->post('/logear_administrador', 'Portal/Login_docente::comprobar_alumno', ['as' => 'logear_administrador']);
 $routes->get('/cerrar_sesion_alumno', 'Portal/Cerrar_sesion_alumno::index', ['as' => 'cerrar_sesion_alumno']);
 
+//General solicitud
+$routes->get('/nueva_solicitud', 'Portal/Nueva_solicitud::index', ['as' => 'Nueva_solicitud']);
+$routes->post('/insertar_solicitud', 'Portal/Nueva_solicitud::insertar_solicitud', ['as' => 'insertar_solicitud']);
+
 
 
 $routes->get('/inicio_alumno', 'Portal/Inicio_alumno::index', ['as' => 'inicio_alumno']);

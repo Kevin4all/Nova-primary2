@@ -131,7 +131,7 @@
                                 <span class="flaticon-businessman"></span>
                             </div> 
                             <div class="service-cap">
-                                <h4><a href="#">Generar solicitud</a></h4>
+                                <h4><a href="<?= route_to('nueva_solicitud')?>">Generar solicitud</a></h4>
                                 
                             </div>
                         </div>
