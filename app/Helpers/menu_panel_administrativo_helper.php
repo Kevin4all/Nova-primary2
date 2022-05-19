@@ -14,14 +14,6 @@ function configurar_menu_panel_administrativo_navegacion(){
     $menu_item['sub_menu'] = array();
     $menu['dashboard'] = $menu_item;
 
-    // //Sección Materias
-    // $menu_item['is_active'] = false;
-    // $menu_item['link'] = route_to('materias');
-    // $menu_item['icono'] = 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01';
-    // $menu_item['texto'] = 'Materias';
-    // $menu_item['sub_menu'] = array();
-    // $menu['materias'] = $menu_item;
-
     //Sección Periodos
     $menu_item['is_active'] = false;
     $menu_item['link'] = route_to('periodos');
@@ -61,11 +53,9 @@ function activar_seccion_menu_panel_administrativo($seccion_a_activar = NULL, $m
     switch ($seccion_a_activar) {
         //SECCIÓN DASHBOARD
         case TAREA_DASHBOARD:
+        case TAREA_MATERIA_NUEVA:
+        case TAREA_MATERIA_DETALLES:
             $menu['dashboard']['is_active'] = TRUE;
-        break;
-        //SECCIÓN MATERIAS
-        case TAREA_MATERIAS:
-            $menu['materias']['is_active'] = TRUE;
         break;
         //SECCIÓN PERIODOS
         case TAREA_PERIODOS:

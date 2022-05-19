@@ -18,5 +18,13 @@ class Tabla_alumnos extends Model{
                           ->first();
         return $resultado;
     }//end logear_alumno
+
+    public function obtener_alumnos_panel(){
+        $resultado = $this
+                          ->select('id_alumno, matricula, nombre, ap_paterno, ap_materno, contrasenia, email, telefono, sexo, cuatrimestre_original, grupo_original, cuatrimestre_recursamiento, grupo_recursamiento')
+                          ->findAll();
+        return $resultado;
+    }//end obtener_alumnos_panel
+
     
 }//End Model alumnos
