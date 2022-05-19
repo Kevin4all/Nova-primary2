@@ -9,6 +9,9 @@
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
+        <link rel="stylesheet" href="<?= base_url('recursos_panel/public/assets/css/tailwind.output.css');?>" />
+        <link rel="stylesheet" href="<?= base_url('recursos_panel/toast/dist/css/iziToast.min.css') ?>">
+
 		<!-- CSS here -->
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/bootstrap.min.css"); ?>">
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/owl.carousel.min.css"); ?>">
@@ -219,6 +222,11 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="<?= base_url("recursos_portal/js/plugins.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/main.js"); ?>"></script>
+
+        <script src="<?= base_url('recursos/jquery-3.6.0.min.js');?>"></script>
+        <script src="<?= base_url('recursos/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
+
+        <script><?= imprimir_mensaje() ?></script>
         
     </body>
 </html>

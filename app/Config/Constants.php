@@ -49,6 +49,17 @@ define("SEXO_FEMENINO", "F");
 
 define("SEXOS", array('F' => 'Femenino', 'M' => 'Masculino'));
 
+define("RECURSE", "0");
+define("COMPLEMENTARIO", "1");
+
+define("CURSO_NORMAL", "curso_normal");
+define("BAJA_TEMPORAL", "baja_temporal");
+
+define("MATUTINO", "matutino");
+define("VESPERTINO", "vespertino");
+
+
+
 //******************************************************************************
 //******************* TAREAS DEL PANEL DE ADMINISTRACIÓN ***********************
 //******************************************************************************

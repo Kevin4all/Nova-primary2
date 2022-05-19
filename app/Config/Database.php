@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'recurses_uptx',
+        'database' => 'recursos_uptx1',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

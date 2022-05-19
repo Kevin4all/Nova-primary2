@@ -45,7 +45,7 @@ $routes->post('/logear_administrador', 'Portal/Login_docente::comprobar_alumno',
 $routes->get('/cerrar_sesion_alumno', 'Portal/Cerrar_sesion_alumno::index', ['as' => 'cerrar_sesion_alumno']);
 
 //General solicitud
-$routes->get('/nueva_solicitud', 'Portal/Nueva_solicitud::index', ['as' => 'Nueva_solicitud']);
+$routes->get('/nueva_solicitud', 'Portal/Nueva_solicitud::index', ['as' => 'nueva_solicitud']);
 $routes->post('/insertar_solicitud', 'Portal/Nueva_solicitud::insertar_solicitud', ['as' => 'insertar_solicitud']);
 
 
