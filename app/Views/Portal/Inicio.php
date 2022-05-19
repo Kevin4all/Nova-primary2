@@ -86,6 +86,7 @@
                     <div class="col-lg-6">
                         <div class="text-center">
                             <b><h1 class="titulo">Recursamientos</h1></b>
+                            <b><h1>Ingresa</h1></b>
 
                         </div>
                     </div>
@@ -98,7 +99,7 @@
                                 <span class="flaticon-businessman"></span>
                             </div>
                             <div class="service-cap">
-                                <h4><a href="#">Ingresar como alumno</a></h4>
+                                <h4><a href="#">Alumno</a></h4>
                                 <div class="boton">
                                     <a href="login_alumno">Iniciar sesión</a>
                                 </div>
@@ -115,7 +116,7 @@
                                 <span class="flaticon-plane"></span>
                             </div>
                             <div class="service-cap">
-                            <h4><a href="#">Ingresar como docente</a></h4>
+                            <h4><a href="#">Administrador</a></h4>
                                 <div class="boton">
                                     <a href="<?= route_to('login_docente')?>">Iniciar sesión</a>
                                 </div>
@@ -131,7 +132,7 @@
                     <div class="col-xl-12 ">
                         <div class="footer-copy-right">
                            <p class="text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados 2022 por Nova corporation
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados por Nova corporation
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                     </div>
