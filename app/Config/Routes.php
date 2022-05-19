@@ -54,6 +54,7 @@ $routes->get('/inicio_alumno', 'Portal/Inicio_alumno::index', ['as' => 'inicio_a
 
 $routes->get('/dashboard', 'Panel/dashboard::index', ['as' => 'dashboard']);
 $routes->get('/periodos', 'Panel/Periodos::index', ['as' => 'periodos']);
+$routes->get('/asignaciones', 'Panel/Asignaciones::index', ['as' => 'asignaciones']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
