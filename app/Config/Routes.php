@@ -71,6 +71,7 @@ $routes->post('/periodos/editar_periodo', 'Panel/Periodo_detalles::actualizar_pe
 $routes->get('/asignaciones', 'Panel/Asignaciones::index', ['as' => 'asignaciones']);
 $routes->get('/alumnos', 'Panel/Alumnos::index', ['as' => 'alumnos']);
 $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
+$routes->get('/plantillapdf', 'Panel/Pruebapdf::index', ['as' => 'plantillapdf']);
 $routes->get('/pdf_demo', 'Panel/Listas::demoPDF', ['as' => 'pdf_demo']);
 /*
  * --------------------------------------------------------------------

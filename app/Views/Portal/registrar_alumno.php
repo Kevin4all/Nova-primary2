@@ -139,36 +139,6 @@
                             ?>
                             Femenino
                       </label>
-                      <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Cuatrimestre</span>
-                        <?php
-                            $parametros = array('type' => 'number',
-                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                'id' => 'cuatri_original',
-                                                'name' => 'cuatri_original',
-                                                'placeholder' => '1',
-                                                'required' => '',
-                                                'max' => '9',
-                                                'min' => '1'
-                                                );
-                            echo form_input($parametros);
-                        ?>
-                      </label>
-
-                      <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Grupo <br></span>
-                                              <?php
-                                      $parametros = array('type' => 'text',
-                                                          'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-                                                          'id' => 'grupo_a',
-                                                          'name' => 'grupo_a',
-                                                          'placeholder' => 'A',
-                                                          'required' => '',
-                                                          'maxlength' => '1'
-                                                          );
-                                      echo form_input($parametros);
-                                  ?>
-                      </label>
 
                       <br>
 

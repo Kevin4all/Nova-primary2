@@ -4,21 +4,10 @@ namespace App\Controllers\Panel;
 
 use \App\Controllers\BaseController;
 
-use Dompdf\Dompdf;
-
-class Listas extends BaseController{
-
-    public function demoPDF()
-    {
-      $dompdf = new Dompdf();
-      $dompdf->loadHTML(view('Panel/plantillapdf'));
-      $dompdf->setPaper('A4', 'landscape');
-      $dompdf->render();
-      $dompdf->stream();
-    }
+class Pruebapdf extends BaseController{
 
     public function index(){
-        return $this->crear_vista('Panel/listas', $this->cargar_datos());
+        return $this->crear_vista('Panel/plantillapdf', $this->cargar_datos());
     }//end index
 
     private function cargar_datos(){
@@ -31,13 +20,13 @@ class Listas extends BaseController{
 
         $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
 
-        $datos['nombre_pestania'] = 'Listas';
+        $datos['nombre_pestania'] = 'Periodos';
 
         return $datos;
     }//end cargar_datos
 
-    private function crear_vista($nombre_vista = 'listas', $contenido = array()){
-        $contenido['menu'] = generar_menu_panel_administrativo_navegacion(TAREA_LISTAS);
+    private function crear_vista($nombre_vista = '', $contenido = array()){
+        $contenido['menu'] = generar_menu_panel_administrativo_navegacion(TAREA_PERIODOS);
         return view($nombre_vista, $contenido);
     }//end crear_vista
 

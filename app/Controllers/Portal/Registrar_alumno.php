@@ -28,8 +28,6 @@ class Registrar_alumno extends BaseController{
         $alumno['email'] = $this->request->getPost('correo_alumno');
         $alumno['telefono'] = $this->request->getPost('telefono');
         $alumno['sexo'] = $this->request->getPost('sexo');
-        $alumno['cuatrimestre_original'] = $this->request->getPost('cuatri_original');
-        $alumno['grupo_original'] = $this->request->getPost('grupo_a');
         if (($tabla_alumnos->insert($alumno))>0) {
           crear_mensaje_usuario('Registro Exitoso.', 'Se ha registrado correctamente a tu usuario.', 'success');
           return redirect()->to(route_to('login_alumno'));
