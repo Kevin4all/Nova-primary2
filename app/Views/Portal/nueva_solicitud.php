@@ -461,7 +461,7 @@
             <div class="row justify-content-center pt-4 pb-4">
                 <div class="col-4 pt-3">
           
-                    <button type="submit" value="submit" class="btn btn-primary ml-5 mr-4 mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
+                    <button type="submit" value="submit" class="btn btn-primary mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
         
                     <a href="<?= route_to('inicio_alumno') ?>">
                         <button type="button" class="btn btn-danger mt-1"><i class="fa fa-times"></i>&nbsp; Cancelar</button>

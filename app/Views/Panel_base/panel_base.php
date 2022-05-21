@@ -144,7 +144,7 @@
             <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Profile menu -->
               <li id="relative">
-                <h1><?= $nombre_completo?></h1>
+                <h3><?= $nombre_completo?></h3>
               </li>
               <li class="relative">
                 <button
