@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html :class="{ 'theme-dark': dark }" x-data="data()" lang="es">
+<html :class="{ 'theme-dark': !dark }" x-data="data()" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +26,11 @@
     ></script>
     <script src="<?= base_url('recursos_panel/public/assets/js/charts-lines.js')?>" defer></script>
     <script src="<?= base_url('recursos_panel/public/assets/js/charts-pie.js')?>" defer></script>
+    <!-- ********************************************************** -->
+	<!-- *************** JS ESPECÍFICOS DE LA VISTA *************** -->
+	<?= $this->renderSection("css") ?>
+	<!-- ********************************************************** -->
+	<!-- ********************************************************** -->
   </head>
   <body>
     <div
@@ -39,7 +44,7 @@
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-            href="#"
+            href="#!"
           >
             Administración
           </a>

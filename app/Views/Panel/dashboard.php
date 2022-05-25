@@ -39,7 +39,7 @@
                     <th>Nombre</th>
                     <th>Siglas</th>
                     <th>Creditos</th>
-                    <th>cuatrimestre</th>
+                    <th>Cuatrimestre</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
                 </tr>

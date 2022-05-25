@@ -49,7 +49,7 @@
 							<tr>
                                 <td>'.++$num.'</td>
                                 <td>'.$materia_periodo->nombre.'</td>
-                                <td>'.$materia_periodo->nombre_periodo.'</td>
+                                <td>'.$materia_periodo->nombre_periodo.' '.$materia_periodo->anio.'</td>
 								<td>
 									<a href="'.route_to('deletear_asignacion', $materia_periodo->id_materia_periodo).'" type="button" class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-purple">Eliminar</a>
 								</td>

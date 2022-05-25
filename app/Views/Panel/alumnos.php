@@ -3,14 +3,12 @@
 <?= $this->section('css') ?>
 
 <link rel="stylesheet" type="text/css" href="<?= base_url('recursos_panel/plugins/datatables/css/datatables.min.css');?>">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
-
-<link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
 <?= $this->endSection() ?>
 
 <?= $this->section('contenido') ?>
+
+
 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
               Alumnos
             </h2>
@@ -60,8 +58,6 @@
 <?= $this->section('js') ?>
 
 <script src="<?= base_url('recursos_panel/plugins/datatables/js/datatables.min.js');?>"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>s
-<!--datatable Js-->
 
 <script>
     $(document).ready(function() {

@@ -10,7 +10,7 @@ class Tabla_materias_periodos extends Model{
 
     public function obtener_materias_periodos_panel(){
         $resultado = $this
-                          ->select('id_materia_periodo, nombre, nombre_periodo')
+                          ->select('id_materia_periodo, nombre, nombre_periodo, anio')
                           ->join('materias', 'materias.id_materia = materias_periodos.id_materia')
                           ->join('periodos_cuatrimestrales', 'periodos_cuatrimestrales.id_periodo = materias_periodos.id_periodo')
                           ->findAll();

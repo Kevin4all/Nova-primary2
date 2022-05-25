@@ -25,12 +25,12 @@ class Tabla_periodos extends Model{
 
     public function generar_dropdown_periodos(){
         $resultado = $this
-                          ->select('id_periodo, nombre_periodo')
+                          ->select('id_periodo, nombre_periodo, anio')
                           ->findAll();
         if ($resultado != NULL) {
             $periodos = array();
             foreach ($resultado as $res) {
-                $periodos[$res->id_periodo] = $res->nombre_periodo;
+                $periodos[$res->id_periodo] = $res->nombre_periodo.' '.$res->anio;
             }//end foreach resultado
             return $periodos;
         }//end if se encontrarón resultados

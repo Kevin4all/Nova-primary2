@@ -79,7 +79,7 @@
                                                 'placeholder' => '1',
                                                 'value' => '',
                                                 'min'=> '1',
-                                                'max'=> '9',
+                                                'max'=> '10',
                                                 'required' => true
                                                 );
                             echo form_input($parametros);

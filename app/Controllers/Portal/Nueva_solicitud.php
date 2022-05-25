@@ -17,6 +17,7 @@ class Nueva_solicitud extends BaseController{
         $datos['nombre'] = $session->nombre;
         $datos['ap_paterno'] = $session->ap_paterno;
         $datos['ap_materno'] = $session->ap_materno;
+        $datos['matricula'] = $session->matricula;
 
         //Elementos propios del controlador
         $tabla_periodos_cuatrimestrales = new \App\Models\Tabla_periodos_cuatrimestrales;
@@ -45,7 +46,7 @@ class Nueva_solicitud extends BaseController{
         $solicitud = array();
         $session = session();
         
-        $solicitud['matricula'] = $this->request->getPost('matricula');
+        $solicitud['matricula'] = $session->matricula;
         $solicitud['fecha'] = $this->request->getPost('fecha_hoy');
         $solicitud['tipo_solicitud'] = $this->request->getPost('tipo_solicitud');
         $solicitud['nombre'] = $session->nombre;
