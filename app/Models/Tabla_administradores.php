@@ -6,12 +6,12 @@ class Tabla_administradores extends Model{
     protected $table = 'administradores';
     protected $primaryKey = 'id_administrador';
     protected $returnType = 'object';
-    protected $allowedFields = ['id_administrador', 'nombre', 'ap_paterno', 'ap_materno', 'telefono', 'email', 'cargo', 'contrasenia'];
+    protected $allowedFields = ['id_administrador', 'nombre', 'ap_paterno', 'ap_materno', 'telefono', 'email', 'cargo', 'contrasenia', 'id_rol'];
 
 
     public function logear_administrador($email = '', $contrasenia = ''){
         $resultado = $this
-                          ->select('id_administrador, nombre, ap_paterno, ap_materno, telefono, email, cargo, contrasenia')
+                          ->select('id_administrador, nombre, ap_paterno, ap_materno, telefono, email, cargo, contrasenia, id_rol')
                           ->where('email', $email)
                           ->where('contrasenia', $contrasenia)
                           ->first();
