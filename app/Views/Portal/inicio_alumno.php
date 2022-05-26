@@ -142,19 +142,21 @@
                                 <span class="flaticon-businessman"></span>
                             </div>
                             <div class="service-cap">
-                                <h4><a href="<?= route_to('nueva_solicitud')?>">Generar solicitud</a></h4>
+                                
+                                <h4><?=$nivel_tramite < 1 ? "<a href=\"". route_to('nueva_solicitud'). "\">Generar solicitud</a>" : "<a href=\"". route_to('#editar_solicitud'). "\">Actualizar solicitud</a>";?></h4>
+                                <!-- <h4><a href="<?= route_to('nueva_solicitud')?>">Generar solicitud</a></h4> -->
 
                             </div>
                         </div>
                     </div>
 
                     <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="services-caption text-center mb-30">
+                        <div class="services-caption<?=$nivel_tramite < 1 ? "-disabled" : "";?> text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
                             </div>
                             <div class="service-cap">
-                            <h4><a href="#">Seleccionar materias</a></h4>
+                            <h4><a <?=$nivel_tramite < 1 ? "" : "href=\"\"";?>>Seleccionar materias</a></h4>
 
 
                             </div>
@@ -162,12 +164,13 @@
                     </div>
 
                     <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="services-caption text-center mb-30">
+                        <div class="services-caption<?=$nivel_tramite < 2 ? "-disabled" : "";?> text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
                             </div>
                             <div class="service-cap">
-                            <h4><a href="<?= route_to('solicitud_pdf')?>">Ver reporte</a></h4>
+                            <!-- <h4><a href="<?= route_to('solicitud_pdf')?>">Ver reporte</a></h4> -->
+                            <h4><a <?=$nivel_tramite < 2 ? "" : "href=\"". route_to('solicitud_pdf'). "\"";?>>Ver reporte</a></h4>
 
                             </div>
                         </div>

@@ -10,6 +10,12 @@ class Tabla_solicitudes extends Model{
                                 'ap_paterno','ap_materno', 'tipo_curso', 'programa_educativo', 
                                 'id_periodo','cuatrimestre', 'grupo', 'turno', 'id_tutor', 'id_director'];
 
-
+    public function verificar_solicitud($matricula = '') {
+        $resultado = $this
+                            ->select('id_proceso')
+                            ->where('matricula', $matricula)
+                            ->first();
+        return $resultado;
+    }
     
 }//End Model solicitudes

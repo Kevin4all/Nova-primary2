@@ -35,6 +35,15 @@ class Inicio_alumno extends BaseController{
 
         $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
 
+        // Verificar si ya tiene solicitud
+        $tabla_solicitudes = new \App\MOdels\Tabla_solicitudes();
+        
+        if($tabla_solicitudes->verificar_solicitud($session->matricula) != null){
+            $datos['nivel_tramite'] = 1;
+        } else {
+            $datos['nivel_tramite'] = 0;
+        }
+
         return $datos;
 
     }//end cargar_datos
