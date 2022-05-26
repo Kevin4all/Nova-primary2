@@ -49,11 +49,9 @@
         <p style="text-align:center"><span
                 style="height:0pt; text-align:left; display:block; position:absolute; z-index:0"><img
                     src="<?= base_url('Imagenes/Portal/upt.jpeg');?>" width="111" height="52"
-
                     style="margin-top:-0.3pt; -aw-left-pos:0pt; -aw-rel-hpos:margin; -aw-rel-vpos:paragraph; -aw-top-pos:-0.3pt; -aw-wrap-type:none; position:absolute" /></span><span
                 style="height:0pt; text-align:left; display:block; position:absolute; z-index:1"><img
-                    src="<?= base_url('Imagenes/Portal/sgc.png');?>" width="105" height="53"
-                    
+                    src="<?= base_url('Imagenes/Portal/upt.jpeg');?>" width="105" height="53"
                     style="margin-top:0.45pt; margin-left:425.76pt; -aw-left-pos:0pt; -aw-rel-hpos:margin; -aw-rel-vpos:paragraph; -aw-top-pos:0.45pt; -aw-wrap-type:none; position:absolute" /></span><span>Subproceso
                 Clave: </span><span style="font-weight:bold">Inscripción y Reinscripción</span><br /><span>Formato:
             </span><span style="font-weight:bold">Solicitud de Recursamiento</span><br /><span>Fecha de aprobación:
@@ -67,7 +65,7 @@
                 </td>
                 <td colspan="2"
                     style="width:108.1pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= $matricula?></span></p>
                 </td>
                 <td
                     style="width:41.7pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
@@ -75,7 +73,7 @@
                 </td>
                 <td colspan="2"
                     style="width:171.1pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= date("Y-m-d");?></span></p>
                 </td>
             </tr>
             <tr>
@@ -85,7 +83,7 @@
                 </td>
                 <td colspan="5"
                     style="width:342.5pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= $nombre_completo?></span></p>
                 </td>
             </tr>
             <tr>
@@ -95,7 +93,7 @@
                 </td>
                 <td
                     style="width:23.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span>x</span></p>
                 </td>
                 <td
                     style="width:74pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
@@ -103,7 +101,7 @@
                 </td>
                 <td
                     style="width:41.7pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span>x</span></p>
                 </td>
                 <td
                     style="width:74.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
@@ -111,7 +109,7 @@
                 </td>
                 <td
                     style="width:85.5pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span>Programa</span></p>
                 </td>
             </tr>
             <tr>
@@ -121,7 +119,7 @@
                 </td>
                 <td colspan="3"
                     style="width:160.6pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span></span></p>
                 </td>
                 <td
                     style="width:74.8pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single; -aw-border-top:0.5pt single">
@@ -129,7 +127,7 @@
                 </td>
                 <td
                     style="width:85.5pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= $gyg?></span></p>
                 </td>
             </tr>
         </table>
@@ -284,11 +282,27 @@
                     <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span>Vo. Bo.</span></p>
                 </td>
             </tr>
-            <tr style="height:24.35pt">
+            <tr style="height:18.4pt">
                 <td
                     style="width:157pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
                     <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span
                             style="-aw-import:ignore">&#xa0;</span></p>
+                </td>
+                <td
+                    style="width:157.05pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
+                    <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span
+                            style="-aw-import:ignore">&#xa0;</span></p>
+                </td>
+                <td
+                    style="width:157.05pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
+                    <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span
+                            style="-aw-import:ignore">&#xa0;</span></p>
+                </td>
+            </tr>
+            <tr style="height:8.35pt">
+                <td
+                    style="width:157pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
+                    <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span><?= $nombre_completo?></span></p>
                 </td>
                 <td
                     style="width:157.05pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
@@ -301,7 +315,7 @@
                             Ochoa</span></p>
                 </td>
             </tr>
-            <tr style="height:7.15pt">
+            <tr style="height:8.35pt">
                 <td
                     style="width:157pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:bottom; -aw-border-top:0.5pt single">
                     <p style="margin-bottom:0pt; text-align:center; font-size:8pt"><span>Firma del Estudiante</span></p>
@@ -334,11 +348,11 @@
         <p><span style="-aw-import:ignore">&#xa0;</span></p>
         <p style="text-align:center"><span
                 style="height:0pt; text-align:left; display:block; position:absolute; z-index:2"><img
-                    src="images/Aspose.Words.658f9891-e0f9-4702-bbc3-734e99985e10.002.jpeg" width="111" height="52"
+                    src="images/Aspose.Words.fcc3f357-b690-4453-922e-3eba38accd8a.002.jpeg" width="111" height="52"
                     alt="Universidad Politécnica de Tlaxcala (UPTx) : Universidades México : Sistema  de Información Cultural-Secretaría de Cultura"
                     style="margin-top:-0.3pt; -aw-left-pos:0pt; -aw-rel-hpos:margin; -aw-rel-vpos:paragraph; -aw-top-pos:-0.3pt; -aw-wrap-type:none; position:absolute" /></span><span
                 style="height:0pt; text-align:left; display:block; position:absolute; z-index:3"><img
-                    src="images/Aspose.Words.658f9891-e0f9-4702-bbc3-734e99985e10.001.png" width="105" height="53"
+                    src="images/Aspose.Words.fcc3f357-b690-4453-922e-3eba38accd8a.001.png" width="105" height="53"
                     alt="Sistema de Gestión de Calidad (SGC)"
                     style="margin-top:0.45pt; margin-left:425.76pt; -aw-left-pos:0pt; -aw-rel-hpos:margin; -aw-rel-vpos:paragraph; -aw-top-pos:0.45pt; -aw-wrap-type:none; position:absolute" /></span><span>Subproceso
                 Clave: </span><span style="font-weight:bold">Inscripción y Reinscripción</span><br /><span>Formato:
@@ -353,7 +367,7 @@
                 </td>
                 <td colspan="2"
                     style="width:108.1pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= $matricula?></span></p>
                 </td>
                 <td
                     style="width:41.7pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
@@ -361,7 +375,7 @@
                 </td>
                 <td colspan="2"
                     style="width:171.1pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= date("Y-m-d");?></span></p>
                 </td>
             </tr>
             <tr>
@@ -371,7 +385,7 @@
                 </td>
                 <td colspan="5"
                     style="width:342.5pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= $nombre_completo?></span></p>
                 </td>
             </tr>
             <tr>
@@ -381,7 +395,7 @@
                 </td>
                 <td
                     style="width:23.3pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span>x</span></p>
                 </td>
                 <td
                     style="width:74pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
@@ -389,7 +403,7 @@
                 </td>
                 <td
                     style="width:41.7pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span>x</span></p>
                 </td>
                 <td
                     style="width:74.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border:0.5pt single">
@@ -397,7 +411,7 @@
                 </td>
                 <td
                     style="width:85.5pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span>Programa</span></p>
                 </td>
             </tr>
             <tr>
@@ -407,7 +421,7 @@
                 </td>
                 <td colspan="3"
                     style="width:160.6pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span> </span></p>
                 </td>
                 <td
                     style="width:74.8pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single; -aw-border-top:0.5pt single">
@@ -415,7 +429,7 @@
                 </td>
                 <td
                     style="width:85.5pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
-                    <p style="margin-bottom:0pt; font-size:10pt"><span style="-aw-import:ignore">&#xa0;</span></p>
+                    <p style="margin-bottom:0pt; font-size:10pt"><span><?= $gyg?></span></p>
                 </td>
             </tr>
         </table>
@@ -570,11 +584,27 @@
                     <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span>Vo. Bo.</span></p>
                 </td>
             </tr>
-            <tr style="height:24.35pt">
+            <tr style="height:18.4pt">
                 <td
                     style="width:157pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
                     <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span
                             style="-aw-import:ignore">&#xa0;</span></p>
+                </td>
+                <td
+                    style="width:157.05pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
+                    <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span
+                            style="-aw-import:ignore">&#xa0;</span></p>
+                </td>
+                <td
+                    style="width:157.05pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
+                    <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span
+                            style="-aw-import:ignore">&#xa0;</span></p>
+                </td>
+            </tr>
+            <tr style="height:8.35pt">
+                <td
+                    style="width:157pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
+                    <p style="margin-bottom:0pt; text-align:center; font-size:10pt"><span><?= $nombre_completo?></span></p>
                 </td>
                 <td
                     style="width:157.05pt; border-right-style:solid; border-right-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-right:0.5pt single">
@@ -587,7 +617,7 @@
                             Ochoa</span></p>
                 </td>
             </tr>
-            <tr style="height:7.15pt">
+            <tr style="height:8.35pt">
                 <td
                     style="width:157pt; border-top-style:solid; border-top-width:0.75pt; padding-right:5.4pt; padding-left:5.4pt; vertical-align:bottom; -aw-border-top:0.5pt single">
                     <p style="margin-bottom:0pt; text-align:center; font-size:8pt"><span>Firma del Estudiante</span></p>

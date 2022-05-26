@@ -10,13 +10,40 @@ class Solicitud_pdf extends BaseController{
     public function imprimirpdf()
     {
       $dompdf = new Dompdf();
-      $dompdf->loadHtml(view('Portal/imprimir_solicitud'));
+      $dompdf->loadHtml(view('Portal/imprimir_solicitud', $this->cargar_datos()));
       $dompdf->setPaper('A4', 'portrait');
       $dompdf->render();
-      $dompdf->stream();
+      $dompdf->stream("Solicitud");
       return view('Portal/Inicio_alumno', $this->cargar_datos());
     }
 
+    private function cargar_datos(){
+        //Todos los datos de la vista (modelos, nombre de la página, etc.)
+        $datos = array();
+
+        $session = session();
+        $datos['nombre'] = $session->nombre;
+        $datos['ap_paterno'] = $session->ap_paterno;
+        $datos['ap_materno'] = $session->ap_materno;
+        $datos['matricula'] = $session->matricula;
+
+        $datos['nombre_completo'] = $session->ap_paterno.' '.$session->ap_materno.' '.$session->nombre;
+        $datos['gyg'] = $session->cuatrimestre_original.'° "'.$session->grupo_original.'"';
+        //Elementos propios del controlador
+        $tabla_periodos_cuatrimestrales = new \App\Models\Tabla_periodos_cuatrimestrales;
+        $datos['periodos'] = $tabla_periodos_cuatrimestrales->generar_dropdown_periodos();
+        //dd($datos['periodos']);
+
+        $tabla_tutores = new \App\Models\Tabla_tutores;
+        $datos['tutores'] = $tabla_tutores->generar_dropdown_tutores();
+        //dd($datos['tutores']);
+
+        $tabla_directores = new \App\Models\Tabla_directores;
+        $datos['directores'] = $tabla_directores->generar_dropdown_directores();
+        //dd($datos['directores']);
+
+        return $datos;
+    }//end cargar_datos
     // public function index(){
     //     return view('Portal/Inicio_alumno', $this->cargar_datos());
     // }
