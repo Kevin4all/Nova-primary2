@@ -211,11 +211,11 @@
                     <div class="form-check mt-2">
                 <label class="direc" for="sexo">Tipo de solicitud: <i class="fa fa-asterisk"></i></label>
                     <div class="radio">
-                        <label for="radio1" class="form-check-label ">
+                        <label for="solicitud_recurse" class="form-check-label ">
                             <?php
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
-                                                    'id' => 'radio1',
+                                                    'id' => 'solicitud_recurse',
                                                     'name' => 'tipo_solicitud'
                                                     );
                                 echo form_input($parametros, RECURSE);
@@ -224,11 +224,11 @@
                         </label>
                     </div>
                     <div class="radio radio-flotado">
-                        <label for="radio2" class="form-check-label ">
+                        <label for="solicitud_complementario" class="form-check-label ">
                             <?php
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
-                                                    'id' => 'radio2',
+                                                    'id' => 'solicitud_complementario',
                                                     'name' => 'tipo_solicitud'
                                                     );
                                 echo form_input($parametros, COMPLEMENTARIO);
@@ -300,11 +300,11 @@
                     <div class="form-check mt-2">
                 <label class="direc" for="sexo">Tipo de curso: <i class="fa fa-asterisk"></i></label>
                     <div class="radio">
-                        <label for="radio1" class="form-check-label ">
+                        <label for="curso_normal" class="form-check-label ">
                             <?php
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
-                                                    'id' => 'isNotDiscounted',
+                                                    'id' => 'curso_normal',
                                                     'name' => 'tipo_curso'
                                                     );
                                 echo form_input($parametros, CURSO_NORMAL);
@@ -312,16 +312,16 @@
                             <!--<input type="radio" id="radio1" name="radios" value="si" class="form-check-input">Sí-->
                         </label>
                     </div>
-                    <div class="radio">
-                        <label for="radio2" class="form-check-label ">
+                    <div class="radio m-0" style="margin-left: 0px !important;">
+                        <label for="curso_baja" class="form-check-label ">
                             <?php
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
-                                                    'id' => 'isDiscounted',
+                                                    'id' => 'curso_baja',
                                                     'name' => 'tipo_curso'
                                                     );
                                 echo form_input($parametros, BAJA_TEMPORAL);
-                            ?>Baja temporal
+                            ?>Baja⠀temporal
                             <!--<input type="radio" id="radio2" name="radios" value="no" class="form-check-input">No-->
                         </label>
                     </div>
@@ -407,11 +407,11 @@
                     <div class="form-check mt-2">
                 <label class="direc" for="sexo">Turno: <i class="fa fa-asterisk"></i></label>
                     <div class="radio">
-                        <label for="radio1" class="form-check-label ">
+                        <label for="turno_matutino" class="form-check-label ">
                             <?php
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
-                                                    'id' => 'radio1',
+                                                    'id' => 'turno_matutino',
                                                     'name' => 'turno'
                                                     );
                                 echo form_input($parametros, MATUTINO);
@@ -420,11 +420,11 @@
                         </label>
                     </div>
                     <div class="radio">
-                        <label for="radio2" class="form-check-label ">
+                        <label for="turno_vespertino" class="form-check-label ">
                             <?php
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
-                                                    'id' => 'radio2',
+                                                    'id' => 'turno_vespertino',
                                                     'name' => 'turno'
                                                     );
                                 echo form_input($parametros, VESPERTINO);
@@ -466,13 +466,14 @@
 
             </div>
             <div class="row justify-content-center pt-4 pb-4">
-                <div class="col-4 pt-3">
+                <div class="col-6 pt-3 d-flex align-items-center">
 
-                    <button type="submit" value="submit" class="btn btn-primary mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
-
-                    <a href="<?= route_to('inicio_alumno') ?>">
-                        <button type="button" class="btn btn-danger mt-1"><i class="fa fa-times"></i>&nbsp; Cancelar</button>
-                    </a>
+                    <div class="mx-auto">
+                        <button type="submit" value="submit" class="btn btn-primary mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
+                        <a href="<?= route_to('inicio_alumno') ?>">
+                            <button type="button" class="btn btn-danger mt-1"><i class="fa fa-times"></i>&nbsp; Cancelar</button>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -639,7 +640,6 @@
         });
 
 
-};
 
 </script>
   </body>

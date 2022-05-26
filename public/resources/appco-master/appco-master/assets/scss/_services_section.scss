@@ -50,7 +50,7 @@
                 line-height: 105px;
                 border-radius: 50%;
                 text-align: center;
-                background:#e88cea;
+                background:#BF015D;
                 margin-bottom: 42px;
                 @include transition(.5s);
 
@@ -65,7 +65,7 @@
                     margin-bottom: 27px;
                     display: inline-block;
                     &:hover{
-                        color:#835ef8;
+                        color:#DF3185;
                     }
                 }
             }
@@ -83,7 +83,7 @@
             right: -32px;
         }
         span{
-            background:#835ef8;
+            background:#DF3185;
         }
     }
 }
@@ -96,7 +96,7 @@
             right: -32px;
         }
         span{
-            background:#835ef8;
+            background:#DF3185;
         }
     }
 }

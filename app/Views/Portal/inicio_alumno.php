@@ -25,6 +25,8 @@
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/nice-select.css"); ?>">
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/style.css"); ?>">
             <style>
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
                 .centercaja{
                     margin-left: 0 !important;
                 }
@@ -33,6 +35,8 @@
                 }
                 .cajas{
                     padding: auto;
+                    margin-top: 10vh;
+                    margin-bottom: 17vh;
                 }
                 .section-padding2 {
                     padding-bottom: 35px !important;
@@ -47,11 +51,11 @@
                     margin: 0px auto;
                     width: 60%;
                     padding: 5px;
-                    background-color:#e88cea;
+                    background-color:#BF015D;
                     border-radius:10px;
                 }
                 .boton:hover{
-                    background-color:#835EF8;
+                    background-color:#DF3185;
                 }
                 .botondos{
                     margin: 0px auto;
@@ -66,7 +70,7 @@
                     color: black;
                 }
                 .resgistrar1:hover{
-                    color:#835EF8 ;
+                    color:#DF3185 ;
                 }
                 .caja12{
                     margin-bottom: 49px;
@@ -77,12 +81,12 @@
                 }
                 .header{
                     width: 100%;
-                    height: 40px;
+                    height: 60px;
                     background-color: white;
                 }
                 .usuario{
                     text-align: right;
-                    padding: 10px;
+                    padding: 18px;
                 }
 
                 .usuario > li{
@@ -100,6 +104,10 @@
                     padding: 15px 30px !important;
                 }
 
+                h1 {
+                    font-family: 'Montserrat', sans-serif;
+                }
+
             </style>
    </head>
 
@@ -109,9 +117,9 @@
         <!-- Services Area Start -->
         <header class="header">
             <nav>
-                <ul class="usuario">
-                    <li class="pull-left"><a href="#"></a><?= $nombre_completo ?></li>
-                    <li class=""><a href="<?= route_to('cerrar_sesion_alumno')?>" class="btn card-btn1">Cerrar sesión</a></li>
+                <ul class="usuario d-flex align-items-center">
+                    <li class="ms-auto mx-5"><a href="#"></a><strong>Bienvenido</strong>, <?= $nombre_completo ?></li>
+                    <li class="ml-auto mx-5"><a href="<?= route_to('cerrar_sesion_alumno')?>" class="btn card-btn1">Cerrar sesión</a></li>
                 </ul>
             </nav>
         </header>
@@ -120,8 +128,8 @@
                 <!-- Section Tittle -->
                 <div class="row espacio d-flex justify-content-center pt-4">
                     <div class="col-lg-6">
-                        <div class="text-center">
-                            <b><h1 class="titulo">Tramites de recursamiento</h1></b>
+                        <div class="text-center mt-4">
+                            <h1><strong>Trámites de recursamiento</strong></h1>
 
                         </div>
                     </div>

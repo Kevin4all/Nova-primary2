@@ -23,6 +23,9 @@
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/style.css"); ?>">
             <link rel="stylesheet" href="<?= base_url('recursos_panel/toast/dist/css/iziToast.min.css') ?>">
             <style>
+
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+                
                 .centercaja{
                     margin-left: 15% !important;
                 }
@@ -31,6 +34,8 @@
                 }
                 .cajas{
                     padding: auto;
+                    margin-top: 7vh;
+                    margin-bottom: 15vh;
                 }
                 .section-padding2 {
                     padding-bottom: 35px !important;
@@ -45,11 +50,11 @@
                     margin: 0px auto;
                     width: 60%;
                     padding: 5px;
-                    background-color:#e88cea;
+                    background-color:#BF015D;
                     border-radius:10px;
                 }
                 .boton:hover{
-                    background-color:#835EF8;
+                    background-color:#DF3185;
                 }
                 .botondos{
                     margin: 0px auto;
@@ -64,7 +69,7 @@
                     color: black;
                 }
                 .resgistrar1:hover{
-                    color:#835EF8 ;
+                    color:#DF3185 ;
                 }
                 .caja12{
                     margin-bottom: 49px;
@@ -72,6 +77,10 @@
                 }
                 .sky-blue {
                     background: #f9fafb;
+                }
+
+                h1 {
+                    font-family: 'Montserrat', sans-serif;
                 }
             </style>
    </head>
@@ -86,21 +95,21 @@
                 <div class="row espacio d-flex justify-content-center pt-4">
                     <div class="col-lg-6">
                         <div class="text-center">
-                            <b><h1 class="titulo">Recursamientos</h1></b>
-                            <b><h1>Ingresa</h1></b>
+                            <b><h1 class="mt-5">Recursamientos</h1></b>
+                            <b><h2>Inicio de sesión</h2></b>
 
                         </div>
                     </div>
                 </div>
                 <!-- Section caption -->
-                <div class="row cajas">
-                    <div class="col-xl-4 col-lg-4 col-md-6 centercaja">
+                <div class="row cajas d-flex align-items-center justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
-                                <span><img src="<?= base_url("Imagenes/estudiante.png")?>"></span>
+                                <span><img src="<?= base_url("Imagenes/estudiante.png")?>" style="height: 50px; margin-bottom: 10px;"></span>
                             </div>
                             <div class="service-cap">
-                                <h4><a href="#">Alumno</a></h4>
+                                <h4><a href="login_alumno">Alumno</a></h4>
                                 <div class="boton">
                                     <a href="login_alumno">Iniciar sesión</a>
                                 </div>
@@ -114,10 +123,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
-                                <span><img src="<?= base_url("Imagenes/admin.png")?>"></span>
+                                <span><img src="<?= base_url("Imagenes/admin.png")?>" style="height: 50px; margin-bottom: 10px;"></span>
                             </div>
                             <div class="service-cap">
-                            <h4><a href="#">Administrador</a></h4>
+                            <h4><a href="login_docente">Administrador</a></h4>
                                 <div class="boton">
                                     <a href="<?= route_to('login_docente')?>">Iniciar sesión</a>
                                 </div>
