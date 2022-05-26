@@ -81,6 +81,7 @@ define("TAREA_ASIGNACION_DETALLES", "asignacion_detalles");
 
 //ALUMNOS
 define("TAREA_ALUMNOS", "alumnos");
+define("TAREA_ALUMNO_DETALLES", "alumnos");
 
 //TUTORES
 define("TAREA_TUTORES", "tutores");

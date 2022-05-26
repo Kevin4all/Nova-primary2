@@ -87,6 +87,7 @@ function activar_seccion_menu_panel_administrativo($seccion_a_activar = NULL, $m
         break;
         //SECCIÓN ALUMNOS
         case TAREA_ALUMNOS:
+        case TAREA_ALUMNO_DETALLES:
             $menu['alumnos']['is_active'] = TRUE;
         break;
         //SECCIÓN TUTORES
