@@ -99,10 +99,6 @@ $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
 $routes->get('/plantillapdf', 'Panel/Pruebapdf::index', ['as' => 'plantillapdf']);
 $routes->get('/pdf_demo', 'Panel/Listas::demoPDF', ['as' => 'pdf_demo']);
 
-
-
-$routes->get('/pdf', 'Panel/Controlador_pdf::index');
-$routes->get('/pdf_vista', 'Panel\Controlador_pdf::htmlToPDF', ['as' => 'crear_pdf']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

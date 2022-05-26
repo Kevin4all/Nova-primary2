@@ -81,6 +81,13 @@
                                                 'required' => true
                                                 );
                             echo form_input($parametros);
+                            
+                            $parametros = array('type' => 'hidden',
+                                                'id' => 'id_alumno',
+                                                'name' => 'id_alumno',
+                                                'value' => $alumno->id_alumno
+                                                );
+                            echo form_input($parametros);
                         ?>
               </label>
                                             </div>
@@ -95,6 +102,91 @@
                                                 'placeholder' => 'Email',
                                                 'value' => $alumno->email,
                                                 'required' => true
+                                                );
+                            echo form_input($parametros);
+                        ?>
+              </label>
+                                            </div>
+                                            
+                                            <div class="mt-4 text-sm">
+              <label class="block text-sm">
+                <span class="text-gray-700 dark:text-gray-400">Teléfono:</span>
+                <?php
+                            $parametros = array('type' => 'text',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'telefono',
+                                                'name' => 'telefono',
+                                                'placeholder' => 'Teléfono',
+                                                'value' => $alumno->telefono,
+                                                'required' => true
+                                                );
+                            echo form_input($parametros);
+                        ?>
+              </label>
+                                            </div>
+                                            
+                                            <div class="mt-4 text-sm">
+              <label class="block text-sm">
+                <span class="text-gray-700 dark:text-gray-400">Cuatrimestre original:</span>
+                <?php
+                            $parametros = array('type' => 'text',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'cuatrimestre_original',
+                                                'name' => 'cuatrimestre_original',
+                                                'placeholder' => 'Cuatrimestre original',
+                                                'value' => $alumno->cuatrimestre_original,
+                                                'required' => true
+                                                );
+                            echo form_input($parametros);
+                        ?>
+              </label>
+                                            </div>
+                                            
+                                            <div class="mt-4 text-sm">
+              <label class="block text-sm">
+                <span class="text-gray-700 dark:text-gray-400">Grupo original:</span>
+                <?php
+                            $parametros = array('type' => 'text',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'grupo_original',
+                                                'name' => 'grupo_original',
+                                                'placeholder' => 'Grupo original',
+                                                'value' => $alumno->grupo_original,
+                                                'required' => true
+                                                );
+                            echo form_input($parametros);
+                        ?>
+              </label>
+                                            </div>
+                                            
+                                            <div class="mt-4 text-sm">
+              <label class="block text-sm">
+                <span class="text-gray-700 dark:text-gray-400">Cuatrimestre recursamiento:</span>
+                <?php
+                            $parametros = array('type' => 'number',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'cuatrimestre_recursamiento',
+                                                'name' => 'cuatrimestre_recursamiento',
+                                                'placeholder' => '1',
+                                                'min' => '1',
+                                                'max' => '9',
+                                                'value' => $alumno->cuatrimestre_recursamiento
+                                                );
+                            echo form_input($parametros);
+                        ?>
+              </label>
+                                            </div>
+                                            
+                                            <div class="mt-4 text-sm">
+              <label class="block text-sm">
+                <span class="text-gray-700 dark:text-gray-400">Grupo recursamiento:</span>
+                <?php
+                            $parametros = array('type' => 'text',
+                                                'class' => 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
+                                                'id' => 'grupo_recursamiento',
+                                                'name' => 'grupo_recursamiento',
+                                                'placeholder' => 'Grupo recursamiento',
+                                                'value' => $alumno->grupo_recursamiento
                                                 );
                             echo form_input($parametros);
                         ?>
@@ -122,6 +214,9 @@
   document.getElementById("ap_paterno").disabled = true;
   document.getElementById("ap_materno").disabled = true;
   document.getElementById("email").disabled = true;
+  document.getElementById("telefono").disabled = true;
+  document.getElementById("cuatrimestre_original").disabled = true;
+  document.getElementById("grupo_original").disabled = true;
 </script>
 
 <?= $this->endSection() ?>
