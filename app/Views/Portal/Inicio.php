@@ -21,6 +21,7 @@
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/slick.css"); ?>">
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/nice-select.css"); ?>">
             <link rel="stylesheet" href="<?= base_url("recursos_portal/css/style.css"); ?>">
+            <link rel="stylesheet" href="<?= base_url('recursos_panel/toast/dist/css/iziToast.min.css') ?>">
             <style>
                 .centercaja{
                     margin-left: 15% !important;
@@ -145,7 +146,7 @@
    </footer>
 
 	<!-- JS here -->
-
+    
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="<?= base_url("recursos_portal/js/vendor/modernizr-3.5.0.min.js"); ?>"></script>
 
@@ -181,6 +182,10 @@
 		<!-- Jquery Plugins, main Jquery -->
         <script src="<?= base_url("recursos_portal/js/plugins.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/main.js"); ?>"></script>
+
+        <script src="<?= base_url('recursos_panel/jquery-3.6.0.min.js');?>"></script>
+        <script src="<?= base_url('recursos_panel/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
+        <script><?= imprimir_mensaje() ?></script>
 
     </body>
 </html>

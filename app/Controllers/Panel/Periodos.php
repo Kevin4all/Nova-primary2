@@ -3,11 +3,27 @@
 namespace App\Controllers\Panel;
 
 use \App\Controllers\BaseController;
+use \App\Libraries\Permisos;
 
 class Periodos extends BaseController{
+    
+    private $esta_permitido = TRUE;
+
+    public function __construct() {
+        $session = session();
+        
+        if(!Permisos::es_rol_permitido(TAREA_PERIODOS, (isset($session->id_rol) ? $session->id_rol : 0))) {
+            $this->esta_permitido = FALSE;
+        }
+    }
 
     public function index(){
-        return $this->crear_vista('Panel/periodos', $this->cargar_datos());
+        if($this->esta_permitido){
+            return $this->crear_vista('Panel/periodos', $this->cargar_datos());
+        }else{
+            crear_mensaje_usuario('Acceso no autorizado.', 'No puedes acceder a esta sección sin un usuario autorizado.', 'error');
+            return redirect()->to(route_to('/dashboard'));
+        }
     }//end index
 
     private function cargar_datos(){

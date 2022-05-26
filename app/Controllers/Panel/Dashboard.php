@@ -6,6 +6,7 @@ use \App\Controllers\BaseController;
 use \App\Libraries\Permisos;
 
 class Dashboard extends BaseController {
+
     private $esta_permitido = TRUE;
 
     public function __construct() {
@@ -20,6 +21,7 @@ class Dashboard extends BaseController {
         if($this->esta_permitido){
             return $this->crear_vista('Panel/dashboard', $this->cargar_datos());
         }else{
+            crear_mensaje_usuario('Acceso no autorizado.', 'No puedes acceder a esta sección sin un usuario autorizado.', 'error');
             return redirect()->to(route_to('/login_admin'));
         }
     }//end index

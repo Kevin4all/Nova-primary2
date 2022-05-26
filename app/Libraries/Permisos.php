@@ -8,11 +8,22 @@ class Permisos {
 
         switch ($seccion_a_acceder) {
             case TAREA_DASHBOARD:
+            case TAREA_MATERIA_NUEVA:
+            case TAREA_MATERIA_DETALLES:
             case TAREA_PERIODOS:
+            case TAREA_PERIODO_NUEVO:
+            case TAREA_PERIODO_DETALLES:
             case TAREA_ASIGNACIONES:
+            case TAREA_ASIGNACION_NUEVA:
+            case TAREA_ASIGNACION_DETALLES:
             case TAREA_ALUMNOS:
+            case TAREA_ALUMNO_DETALLES:
             case TAREA_TUTORES:
+            case TAREA_TUTOR_NUEVO:
+            case TAREA_TUTOR_DETALLES:
             case TAREA_DIRECTORES:
+            case TAREA_DIRECTOR_NUEVO:
+            case TAREA_DIRECTOR_DETALLES:
             case TAREA_LISTAS:
                 $esta_permitido = array(
                     ROL_ADMIN['id']

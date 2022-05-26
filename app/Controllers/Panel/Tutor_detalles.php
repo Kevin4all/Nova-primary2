@@ -3,11 +3,27 @@
 namespace App\Controllers\Panel;
 
 use \App\Controllers\BaseController;
+use \App\Libraries\Permisos;
 
 class Tutor_detalles extends BaseController{
 
+    private $esta_permitido = TRUE;
+
+    public function __construct() {
+        $session = session();
+        
+        if(!Permisos::es_rol_permitido(TAREA_TUTOR_DETALLES, (isset($session->id_rol) ? $session->id_rol : 0))) {
+            $this->esta_permitido = FALSE;
+        }
+    }
+
     public function index($id_tutor = 0){
-        return $this->crear_vista('Panel/tutor_detalles', $this->cargar_datos($id_tutor));
+        if($this->esta_permitido){
+            return $this->crear_vista('Panel/tutor_detalles', $this->cargar_datos($id_tutor));
+        }else{
+            crear_mensaje_usuario('Acceso no autorizado.', 'No puedes acceder a esta sección sin un usuario autorizado.', 'error');
+            return redirect()->to(route_to('/dashboard'));
+        }
     }//end index
 
     private function cargar_datos($id_tutor = 0){
