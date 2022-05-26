@@ -2,11 +2,27 @@
 
 namespace App\Controllers\Portal;
 use \App\Controllers\BaseController;
+use \App\Libraries\Permisos;
 
 class Nueva_solicitud extends BaseController{
+    
+    private $esta_permitido = TRUE;
+
+    public function __construct() {
+        $session = session();
+        
+        if(!Permisos::es_rol_permitido(TAREA_PORTAL_SOLICITUD, (isset($session->id_rol) ? $session->id_rol : 0))) {
+            $this->esta_permitido = FALSE;
+        }
+    }
 
     public function index(){
-		return $this->crear_vista("Portal/nueva_solicitud", $this->cargar_datos());
+        if($this->esta_permitido){
+            return $this->crear_vista("Portal/nueva_solicitud", $this->cargar_datos());
+        }else{
+            crear_mensaje_usuario('Acceso no autorizado.', 'No puedes acceder a esta sección sin un usuario autorizado.', 'error');
+            return redirect()->to(route_to('/'));
+        }
 	}//end of function index
 
     private function cargar_datos(){
