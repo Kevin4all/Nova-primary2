@@ -25,4 +25,19 @@ class Tabla_tutores extends Model{
             return NULL;
         }
     }//end generar_dropdown_periodos
+
+    public function obtener_tutores_panel(){
+        $resultado = $this
+                          ->select('id_tutor, nombre, ap_paterno, ap_materno')
+                          ->findAll();
+        return $resultado;
+    }//end obtener_tutores_panel
+
+    public function obtener_tutor($id_tutor = 0){
+        $resultado = $this
+                          ->select('id_tutor, nombre, ap_paterno, ap_materno')
+                          ->where('id_tutor', $id_tutor)
+                          ->first();
+        return $resultado;
+    }//end obtener_materia
 }//End Model periodos

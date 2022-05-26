@@ -72,6 +72,23 @@ $routes->get('/asignaciones', 'Panel/Asignaciones::index', ['as' => 'asignacione
 $routes->get('/asignaciones/deletear_asignacion/(:num)', 'Panel\Asignaciones::eliminar_asignacion/$1', ['as' => 'deletear_asignacion']);
 $routes->get('/asignaciones/asignacion_nueva', 'Panel/Asignacion_nueva::index', ['as' => 'asignacion_nueva']);
 $routes->post('/asignaciones/insertar_asignacion', 'Panel/Asignacion_nueva::insertar_asignacion', ['as' => 'insertar_asignacion']);
+$routes->get('/asignaciones/detalles_asignacion/(:num)', 'Panel\Asignacion_detalles::index/$1', ['as' => 'detalles_asignacion']);
+$routes->post('/asignaciones/editar_asignacion', 'Panel/Asignacion_detalles::actualizar_asignacion', ['as' => 'editar_asignacion']);
+
+
+$routes->get('/tutores', 'Panel/Tutores::index', ['as' => 'tutores']);
+$routes->get('/tutores/deletear_tutor/(:num)', 'Panel\Tutores::eliminar_tutor/$1', ['as' => 'deletear_tutor']);
+$routes->get('/tutores/tutor_nuevo', 'Panel/Tutor_nuevo::index', ['as' => 'tutor_nuevo']);
+$routes->post('/tutores/insertar_tutor', 'Panel/Tutor_nuevo::insertar_tutor', ['as' => 'insertar_tutor']);
+$routes->get('/tutores/detalles_tutor/(:num)', 'Panel\Tutor_detalles::index/$1', ['as' => 'detalles_tutor']);
+$routes->post('/tutores/editar_tutor', 'Panel/Tutor_detalles::actualizar_tutor', ['as' => 'editar_tutor']);
+
+$routes->get('/directores', 'Panel/Directores::index', ['as' => 'directores']);
+$routes->get('/directores/deletear_director/(:num)', 'Panel\Directores::eliminar_director/$1', ['as' => 'deletear_director']);
+$routes->get('/directores/director_nuevo', 'Panel/Director_nuevo::index', ['as' => 'director_nuevo']);
+$routes->post('/directores/insertar_director', 'Panel/Director_nuevo::insertar_director', ['as' => 'insertar_director']);
+$routes->get('/directores/detalles_director/(:num)', 'Panel\Director_detalles::index/$1', ['as' => 'detalles_director']);
+$routes->post('/directores/editar_director', 'Panel/Director_detalles::actualizar_director', ['as' => 'editar_director']);
 
 $routes->get('/alumnos', 'Panel/Alumnos::index', ['as' => 'alumnos']);
 $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);

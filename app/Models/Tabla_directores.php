@@ -25,4 +25,11 @@ class Tabla_directores extends Model{
             return NULL;
         }
     }//end generar_dropdown_periodos
+
+    public function obtener_directores_panel(){
+        $resultado = $this
+                          ->select('id_director, nombre, ap_paterno, ap_materno')
+                          ->findAll();
+        return $resultado;
+    }//end obtener_directores_panel
 }//End Model periodos
