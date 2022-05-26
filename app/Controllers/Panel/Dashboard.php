@@ -22,7 +22,7 @@ class Dashboard extends BaseController {
             return $this->crear_vista('Panel/dashboard', $this->cargar_datos());
         }else{
             crear_mensaje_usuario('Acceso no autorizado.', 'No puedes acceder a esta sección sin un usuario autorizado.', 'error');
-            return redirect()->to(route_to('/login_admin'));
+            return redirect()->to(route_to('/'));
         }
     }//end index
 
