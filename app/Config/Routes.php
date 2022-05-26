@@ -50,7 +50,7 @@ $routes->get('/editar_solicitud', 'Portal/Editar_solicitud::index', ['as' => 'ed
 $routes->post('/insertar_solicitud', 'Portal/Nueva_solicitud::insertar_solicitud', ['as' => 'insertar_solicitud']);
 $routes->post('/actualizar_solicitud', 'Portal/Editar_solicitud::actualizar_solicitud', ['as' => 'actualizar_solicitud']);
 
-
+$routes->get('/seleccionar_materias', 'Portal/Seleccionar_materias::index', ['as' => 'seleccionar_materias']);
 
 $routes->get('/inicio_alumno', 'Portal/Inicio_alumno::index', ['as' => 'inicio_alumno']);
 

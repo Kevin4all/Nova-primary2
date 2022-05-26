@@ -21,7 +21,7 @@
 
   <div class="card-block">
         <div class="table-responsive">
-          <table class="datatable-own display table nowrap table-striped table-hover" style="">
+          <table class="datatable-own display table nowrap table-striped table-hover">
 
             <thead>
             <tr>
