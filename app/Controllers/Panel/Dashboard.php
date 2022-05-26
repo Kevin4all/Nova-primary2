@@ -3,11 +3,25 @@
 namespace App\Controllers\Panel;
 
 use \App\Controllers\BaseController;
+use \App\Libraries\Permisos;
 
-class Dashboard extends BaseController{
+class Dashboard extends BaseController {
+    private $esta_permitido = TRUE;
+
+    public function __construct() {
+        $session = session();
+        
+        if(!Permisos::es_rol_permitido(TAREA_DASHBOARD, (isset($session->id_rol) ? $session->id_rol : 0))) {
+            $this->esta_permitido = FALSE;
+        }
+    }
 
     public function index(){
-        return $this->crear_vista('Panel/dashboard', $this->cargar_datos());
+        if($this->esta_permitido){
+            return $this->crear_vista('Panel/dashboard', $this->cargar_datos());
+        }else{
+            return redirect()->to(route_to('/login_admin'));
+        }
     }//end index
 
     private function cargar_datos(){

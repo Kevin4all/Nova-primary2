@@ -58,7 +58,9 @@ define("BAJA_TEMPORAL", "baja_temporal");
 define("MATUTINO", "matutino");
 define("VESPERTINO", "vespertino");
 
-
+// ROLES
+define("ROL_ADMIN", array('rol_nombre' => 'Administrador', 'id' => '1'));
+define("ROL_ALUMNO", array('rol_nombre' => 'Alumno', 'id' => '2'));
 
 //******************************************************************************
 //******************* TAREAS DEL PANEL DE ADMINISTRACIÓN ***********************
@@ -96,6 +98,15 @@ define("TAREA_DIRECTOR_DETALLES", "director_detalles");
 //LISTAS
 define("TAREA_LISTAS", "listas");
 
+
+//******************************************************************************
+//******************* TAREAS DEL PORTAL PÚBLICO ********************************
+//******************************************************************************
+
+define("TAREA_PORTAL_ALUMNOS", "portal_alumnos");
+define("TAREA_PORTAL_SOLICITUD", "portal_solicitud");
+define("TAREA_PORTAL_MATERIAS", "portal_materias");
+    
 /*
  | --------------------------------------------------------------------------
  | Exit Status Codes
