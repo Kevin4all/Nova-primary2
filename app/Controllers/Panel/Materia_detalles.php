@@ -3,6 +3,7 @@
 namespace App\Controllers\Panel;
 
 use \App\Controllers\BaseController;
+use \App\Libraries\Permisos;
 
 class Materia_detalles extends BaseController{
 

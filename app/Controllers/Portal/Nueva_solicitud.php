@@ -43,9 +43,12 @@ class Nueva_solicitud extends BaseController{
     public function insertar_solicitud(){
 
         $tabla_solicitudes =  new \App\Models\Tabla_solicitudes;
+        $tabla_alumnos = new \App\Models\Tabla_alumnos;
         $solicitud = array();
+        $alumno = array();
         $session = session();
         
+        $id_alumno = $session->id_alumno;
         $solicitud['matricula'] = $session->matricula;
         $solicitud['fecha'] = $this->request->getPost('fecha_hoy');
         $solicitud['tipo_solicitud'] = $this->request->getPost('tipo_solicitud');
@@ -61,9 +64,12 @@ class Nueva_solicitud extends BaseController{
         $solicitud['id_tutor'] = $this->request->getPost('tutor');
         $solicitud['id_director'] = $this->request->getPost('director');
 
-        //dd($solicitud);
+        $alumno['cuatrimestre_original'] = $this->request->getPost('cuatrimestre');
+        $alumno['grupo_original'] = $this->request->getPost('grupo');
+        $alumno['id_periodo'] = $this->request->getPost('periodo');
 
-        if(($tabla_solicitudes->insert($solicitud)) > 0) {
+        //dd($solicitud);
+        if(($tabla_solicitudes->insert($solicitud)) > 0 && ($tabla_alumnos->update($id_alumno, $alumno))) {
             crear_mensaje_usuario('Solicitud registrada exitosamente', 'La solicitud se ha registrado con éxito', 'success');
             return redirect()->to(route_to('inicio_alumno'));
         }//se insertaron los datos a la DB

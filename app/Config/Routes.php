@@ -98,10 +98,6 @@ $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
 
 $routes->get('/solicitud_pdf', 'Portal/Solicitud_pdf::imprimirpdf', ['as' => 'solicitud_pdf']);
 
-
-
-$routes->get('/pdf', 'Panel/Controlador_pdf::index');
-$routes->get('/pdf_vista', 'Panel\Controlador_pdf::htmlToPDF', ['as' => 'crear_pdf']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

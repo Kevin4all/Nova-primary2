@@ -38,8 +38,11 @@ class Alumno_detalles extends BaseController{
         $id_alumno = $this->request->getPost('id_alumno');
         $tabla_alumnos = new \App\Models\Tabla_alumnos;
         $alumno = array();
-        $alumno['cuatrimestre_recursamiento'] = $this->request->getPost('cuatrimestre_recursamiento');
-        $alumno['grupo_recursamiento'] = $this->request->getPost('grupo_recursamiento');
+        $alumno['matricula'] = $this->request->getPost('matricula');
+        $alumno['cuatrimestre_original'] = $this->request->getPost('cuatrimestre_original');
+            $alumno['grupo_original'] = $this->request->getPost('grupo_original');
+            $alumno['cuatrimestre_recursamiento'] = $this->request->getPost('cuatrimestre_recursamiento');
+            $alumno['grupo_recursamiento'] = $this->request->getPost('grupo_recursamiento');
         if(($tabla_alumnos->update($id_alumno, $alumno))){
             crear_mensaje_usuario('Actualización Exitosa.', 'Se ha actualizado correctamente el alumno.', 'success');
             return redirect()->to(route_to('detalles_alumno', $id_alumno));

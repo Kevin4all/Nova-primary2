@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2022 a las 03:27:15
+-- Tiempo de generación: 26-05-2022 a las 10:23:33
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.23
 
@@ -35,16 +35,17 @@ CREATE TABLE `administradores` (
   `telefono` varchar(10) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `cargo` varchar(100) NOT NULL,
-  `contrasenia` varchar(25) NOT NULL
+  `contrasenia` varchar(25) NOT NULL,
+  `id_rol` int(5) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `administradores`
 --
 
-INSERT INTO `administradores` (`id_administrador`, `nombre`, `ap_paterno`, `ap_materno`, `telefono`, `email`, `cargo`, `contrasenia`) VALUES
-(1, 'Darien', 'Pérez', 'Cano', '2461234567', 'darien@gmail.com', 'Director Académico', 'darien'),
-(2, 'Kevin', 'Zecua', 'Pérez', '2461111111', 'kevin@gmail.com', 'Tutor', 'kevin');
+INSERT INTO `administradores` (`id_administrador`, `nombre`, `ap_paterno`, `ap_materno`, `telefono`, `email`, `cargo`, `contrasenia`, `id_rol`) VALUES
+(1, 'Darien', 'Pérez', 'Cano', '2461234567', 'darien@gmail.com', 'Director Académico', 'darien', 1),
+(2, 'Kevin', 'Zecua', 'Pérez', '2461111111', 'kevin@gmail.com', 'Tutor', 'kevin', 1);
 
 -- --------------------------------------------------------
 
@@ -65,16 +66,18 @@ CREATE TABLE `alumnos` (
   `cuatrimestre_original` varchar(10) DEFAULT NULL,
   `grupo_original` varchar(2) DEFAULT NULL,
   `cuatrimestre_recursamiento` varchar(10) DEFAULT NULL,
-  `grupo_recursamiento` varchar(2) DEFAULT NULL
+  `grupo_recursamiento` varchar(2) DEFAULT NULL,
+  `id_periodo` int(5) DEFAULT NULL,
+  `id_rol` int(5) NOT NULL DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`id_alumno`, `matricula`, `nombre`, `ap_paterno`, `ap_materno`, `contrasenia`, `email`, `telefono`, `sexo`, `cuatrimestre_original`, `grupo_original`, `cuatrimestre_recursamiento`, `grupo_recursamiento`) VALUES
-(1, 1931116192, 'Felipe', 'Calva', 'Lima', 'felipe', 'felipe@gmail.com', '2462183082', 'M', '9', 'A', NULL, NULL),
-(2, 1931116210, 'Angel Daniel', 'Vazquez', 'Tapia', 'daniel', 'daniel@gmail.com', '2466666666', 'M', '9', 'B', NULL, NULL);
+INSERT INTO `alumnos` (`id_alumno`, `matricula`, `nombre`, `ap_paterno`, `ap_materno`, `contrasenia`, `email`, `telefono`, `sexo`, `cuatrimestre_original`, `grupo_original`, `cuatrimestre_recursamiento`, `grupo_recursamiento`, `id_periodo`, `id_rol`) VALUES
+(1, 1931116192, 'Felipe', 'Calva', 'Lima', 'felipe', 'felipe@gmail.com', '2462183082', 'M', NULL, NULL, NULL, NULL, NULL, 2),
+(2, 1931116210, 'Angel Daniel', 'Vazquez', 'Tapia', 'daniel', 'daniel@gmail.com', '2466666666', 'M', NULL, NULL, NULL, NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -182,13 +185,6 @@ CREATE TABLE `procesos_solicitudes` (
   `id_tutor` int(5) NOT NULL,
   `id_director` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `procesos_solicitudes`
---
-
-INSERT INTO `procesos_solicitudes` (`id_proceso`, `matricula`, `fecha`, `tipo_solicitud`, `nombre`, `ap_paterno`, `ap_materno`, `tipo_curso`, `programa_educativo`, `id_periodo`, `cuatrimestre`, `grupo`, `turno`, `id_tutor`, `id_director`) VALUES
-(7, 1931116210, '2022-05-25', 0, 'Angel Daniel', 'Vazquez', 'Tapia', 'curso_normal', 'Ing_TI', 5, '1', 0, 0, 4, 3);
 
 -- --------------------------------------------------------
 
@@ -312,7 +308,7 @@ ALTER TABLE `periodos_cuatrimestrales`
 -- AUTO_INCREMENT de la tabla `procesos_solicitudes`
 --
 ALTER TABLE `procesos_solicitudes`
-  MODIFY `id_proceso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_proceso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tutores`

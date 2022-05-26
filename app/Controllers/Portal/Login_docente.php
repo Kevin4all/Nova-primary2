@@ -10,6 +10,7 @@ class Login_docente extends BaseController{
 	}//end of function index
 
 	private function crear_vista($nombre_vista){
+		session()->destroy();
 		return view($nombre_vista);
 	}//end of function crear_vista
 
@@ -28,6 +29,7 @@ class Login_docente extends BaseController{
 			$session->set('telefono', $datos_administrador->telefono);
 			$session->set('email', $datos_administrador->email);
             $session->set('cargo', $datos_administrador->cargo);
+			$session->set('id_rol', $datos_administrador->id_rol);
 			return redirect()->to(route_to('dashboard'));
 		}//end if existe el alumno
 		else{

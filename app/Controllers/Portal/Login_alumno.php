@@ -10,10 +10,12 @@ class Login_alumno extends BaseController{
 	}//end of function index
 
 	private function crear_vista($nombre_vista){
+		session()->destroy();
 		return view($nombre_vista);
 	}//end of function crear_vista
 
   public function comprobar_alumno(){
+		
 		$session = session();
 		$matricula = $this->request->getPost('matricula');
 		$contrasenia = $this->request->getPost('contrasenia');
@@ -33,6 +35,7 @@ class Login_alumno extends BaseController{
 			$session->set('grupo_original', $datos_alumnos->grupo_original);
 			$session->set('cuatrimestre_recursamiento', $datos_alumnos->cuatrimestre_recursamiento);
 			$session->set('grupo_recursamiento', $datos_alumnos->grupo_recursamiento);
+			$session->set('id_rol', $datos_alumnos->id_rol);
 			return redirect()->to(route_to('inicio_alumno'));
 		}//end if existe el alumno
 		else{
