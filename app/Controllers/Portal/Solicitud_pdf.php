@@ -13,8 +13,8 @@ class Solicitud_pdf extends BaseController{
       $dompdf->loadHtml(view('Portal/imprimir_solicitud', $this->cargar_datos()));
       $dompdf->setPaper('A4', 'portrait');
       $dompdf->render();
-      $dompdf->stream("Solicitud");
-      return view('Portal/Inicio_alumno', $this->cargar_datos());
+      $dompdf->stream("Solicitud", array("Attachment" => false));
+      // return view('Portal/Inicio_alumno', $this->cargar_datos());
     }
 
     private function cargar_datos(){

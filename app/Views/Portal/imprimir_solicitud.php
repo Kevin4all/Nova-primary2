@@ -347,13 +347,11 @@
         </table>
         <p><span style="-aw-import:ignore">&#xa0;</span></p>
         <p style="text-align:center"><span
-                style="height:0pt; text-align:left; display:block; position:absolute; z-index:2"><img
-                    src="images/Aspose.Words.fcc3f357-b690-4453-922e-3eba38accd8a.002.jpeg" width="111" height="52"
-                    alt="Universidad Politécnica de Tlaxcala (UPTx) : Universidades México : Sistema  de Información Cultural-Secretaría de Cultura"
+                style="height:0pt; text-align:left; display:block; position:absolute; z-index:0"><img
+                    src="<?= base_url('Imagenes/Portal/upt.jpeg');?>" width="111" height="52"
                     style="margin-top:-0.3pt; -aw-left-pos:0pt; -aw-rel-hpos:margin; -aw-rel-vpos:paragraph; -aw-top-pos:-0.3pt; -aw-wrap-type:none; position:absolute" /></span><span
-                style="height:0pt; text-align:left; display:block; position:absolute; z-index:3"><img
-                    src="images/Aspose.Words.fcc3f357-b690-4453-922e-3eba38accd8a.001.png" width="105" height="53"
-                    alt="Sistema de Gestión de Calidad (SGC)"
+                style="height:0pt; text-align:left; display:block; position:absolute; z-index:1"><img
+                    src="<?= base_url('Imagenes/Portal/upt.jpeg');?>" width="105" height="53"
                     style="margin-top:0.45pt; margin-left:425.76pt; -aw-left-pos:0pt; -aw-rel-hpos:margin; -aw-rel-vpos:paragraph; -aw-top-pos:0.45pt; -aw-wrap-type:none; position:absolute" /></span><span>Subproceso
                 Clave: </span><span style="font-weight:bold">Inscripción y Reinscripción</span><br /><span>Formato:
             </span><span style="font-weight:bold">Solicitud de Recursamiento</span><br /><span>Fecha de aprobación:
