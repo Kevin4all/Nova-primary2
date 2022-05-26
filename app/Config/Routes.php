@@ -91,9 +91,18 @@ $routes->get('/directores/detalles_director/(:num)', 'Panel\Director_detalles::i
 $routes->post('/directores/editar_director', 'Panel/Director_detalles::actualizar_director', ['as' => 'editar_director']);
 
 $routes->get('/alumnos', 'Panel/Alumnos::index', ['as' => 'alumnos']);
+$routes->get('/alumnos/detalles_alumno/(:num)', 'Panel\Alumno_detalles::index/$1', ['as' => 'detalles_alumno']);
+$routes->post('/alumnos/editar_alumno', 'Panel/Alumno_detalles::actualizar_alumno', ['as' => 'editar_alumno']);
+
 $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
+
 $routes->get('/plantillapdf', 'Panel/Pruebapdf::index', ['as' => 'plantillapdf']);
 $routes->get('/pdf_demo', 'Panel/Listas::demoPDF', ['as' => 'pdf_demo']);
+
+
+
+$routes->get('/pdf', 'Panel/Controlador_pdf::index');
+$routes->get('/pdf_vista', 'Panel\Controlador_pdf::htmlToPDF', ['as' => 'crear_pdf']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
