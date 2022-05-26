@@ -20,7 +20,13 @@ class Pruebapdf extends BaseController{
 
         $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
 
+        //dd($datos);
+
         $datos['nombre_pestania'] = 'Periodos';
+
+        $tabla_periodos = new \App\Models\Tabla_periodos;
+        $datos['periodos'] = $tabla_periodos->obtener_periodos_panel();
+        //dd($datos['periodos']);
 
         return $datos;
     }//end cargar_datos

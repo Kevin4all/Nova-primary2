@@ -291,7 +291,7 @@
                 <div class="col-4">
                 <div class="form-group">
                     <div class="form-check mt-2">
-                <label class="direc" for="sexo">Tipo de solicitud: <i class="fa fa-asterisk"></i></label>
+                <label class="direc" for="sexo">Tipo de curso: <i class="fa fa-asterisk"></i></label>
                     <div class="radio">
                         <label for="radio1" class="form-check-label ">
                             <?php

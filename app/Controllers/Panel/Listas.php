@@ -11,7 +11,7 @@ class Listas extends BaseController{
     public function demoPDF()
     {
       $dompdf = new Dompdf();
-      $dompdf->loadHTML(view('Panel/plantillapdf'));
+      $dompdf->loadHTML(view('Panel/plantillapdf', $this->cargar_datos()));
       $dompdf->setPaper('A4', 'landscape');
       $dompdf->render();
       $dompdf->stream();
@@ -30,6 +30,11 @@ class Listas extends BaseController{
         $datos['ap_materno'] = $session->ap_materno;
 
         $datos['nombre_completo'] = $session->nombre.' '.$session->ap_paterno.' '.$session->ap_materno;
+
+        $tabla_periodos = new \App\Models\Tabla_periodos;
+        $datos['periodos'] = $tabla_periodos->obtener_periodos_panel();
+        //dd($datos['periodos']);
+
 
         $datos['nombre_pestania'] = 'Listas';
 

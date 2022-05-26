@@ -35,7 +35,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Tiger Nixon</td>
+                <td><?= $nombre_completo ?></td>
                 <td>System Architect</td>
                 <td>Edinburgh</td>
                 <td>61</td>
@@ -43,7 +43,7 @@
                 <td>$320,800</td>
             </tr>
             <tr>
-                <td>Garrett Winters</td>
+                <td><?php dd($periodos); ?></td>
                 <td>Accountant</td>
                 <td>Tokyo</td>
                 <td>63</td>
