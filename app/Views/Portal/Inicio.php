@@ -126,7 +126,7 @@
                                 <span><img src="<?= base_url("Imagenes/admin.png")?>" style="height: 50px; margin-bottom: 10px;"></span>
                             </div>
                             <div class="service-cap">
-                            <h4><a href="login_docente">Administrador</a></h4>
+                            <h4><a href="<?= route_to('login_docente')?>">Administrador</a></h4>
                                 <div class="boton">
                                     <a href="<?= route_to('login_docente')?>">Iniciar sesión</a>
                                 </div>
