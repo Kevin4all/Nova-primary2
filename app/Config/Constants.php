@@ -77,9 +77,20 @@ define("TAREA_PERIODO_DETALLES", "periodo_detalles");
 //ASIGNACIONES
 define("TAREA_ASIGNACIONES", "asignaciones");
 define("TAREA_ASIGNACION_NUEVA", "asignacion_nueva");
+define("TAREA_ASIGNACION_DETALLES", "asignacion_detalles");
 
 //ALUMNOS
 define("TAREA_ALUMNOS", "alumnos");
+
+//TUTORES
+define("TAREA_TUTORES", "tutores");
+define("TAREA_TUTOR_NUEVO", "tutor_nuevo");
+define("TAREA_TUTOR_DETALLES", "tutor_detalles");
+
+//DIRECTORES
+define("TAREA_DIRECTORES", "directores");
+define("TAREA_DIRECTOR_NUEVO", "director_nuevo");
+define("TAREA_DIRECTOR_DETALLES", "director_detalles");
 
 //LISTAS
 define("TAREA_LISTAS", "listas");

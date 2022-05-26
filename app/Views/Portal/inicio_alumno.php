@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -223,8 +223,8 @@
         <script src="<?= base_url("recursos_portal/js/plugins.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/main.js"); ?>"></script>
 
-        <script src="<?= base_url('recursos/jquery-3.6.0.min.js');?>"></script>
-        <script src="<?= base_url('recursos/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
+        <script src="<?= base_url('recursos_panel/jquery-3.6.0.min.js');?>"></script>
+        <script src="<?= base_url('recursos_panel/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
 
         <script><?= imprimir_mensaje() ?></script>
         

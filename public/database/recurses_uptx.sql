@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2022 a las 19:20:11
+-- Tiempo de generación: 26-05-2022 a las 03:27:15
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.23
 
@@ -43,8 +43,8 @@ CREATE TABLE `administradores` (
 --
 
 INSERT INTO `administradores` (`id_administrador`, `nombre`, `ap_paterno`, `ap_materno`, `telefono`, `email`, `cargo`, `contrasenia`) VALUES
-(1, 'Darien', 'Perez', 'Cano', '2461234567', 'darien@gmail.com', 'Director Academico', 'darien'),
-(2, 'Kevin', 'Zecua', 'Perez', '2461111111', 'kevin@gmail.com', 'Tutor', 'kevin');
+(1, 'Darien', 'Pérez', 'Cano', '2461234567', 'darien@gmail.com', 'Director Académico', 'darien'),
+(2, 'Kevin', 'Zecua', 'Pérez', '2461111111', 'kevin@gmail.com', 'Tutor', 'kevin');
 
 -- --------------------------------------------------------
 
@@ -73,8 +73,8 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id_alumno`, `matricula`, `nombre`, `ap_paterno`, `ap_materno`, `contrasenia`, `email`, `telefono`, `sexo`, `cuatrimestre_original`, `grupo_original`, `cuatrimestre_recursamiento`, `grupo_recursamiento`) VALUES
-(1, 1931116192, 'Felipe', 'Calva', 'Lima', 'felipe', 'felipe@gmail.com', '2462183082', 'm', '9', 'A', NULL, NULL),
-(2, 1931116210, 'Angel Daniel', 'Vazquez', 'Tapia', 'daniel', 'daniel@gmail.com', '2466666666', 'm', '9', 'B', NULL, NULL);
+(1, 1931116192, 'Felipe', 'Calva', 'Lima', 'felipe', 'felipe@gmail.com', '2462183082', 'M', '9', 'A', NULL, NULL),
+(2, 1931116210, 'Angel Daniel', 'Vazquez', 'Tapia', 'daniel', 'daniel@gmail.com', '2466666666', 'M', '9', 'B', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -88,6 +88,14 @@ CREATE TABLE `directores` (
   `ap_paterno` varchar(50) NOT NULL,
   `ap_materno` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `directores`
+--
+
+INSERT INTO `directores` (`id_director`, `nombre`, `ap_paterno`, `ap_materno`) VALUES
+(3, 'Sergio', 'Ramos', 'García'),
+(4, 'Juan Pablo', 'Montoya', 'Roldán');
 
 -- --------------------------------------------------------
 
@@ -103,6 +111,14 @@ CREATE TABLE `materias` (
   `cuatrimestre` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `materias`
+--
+
+INSERT INTO `materias` (`id_materia`, `nombre`, `siglas`, `creditos`, `cuatrimestre`) VALUES
+(7, 'Tecnologias y Aplicaciones de Internet', 'TYADI', 3, '8'),
+(8, 'Expresion Oral y Escrita I', 'EYOEI', 2, '1');
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +131,14 @@ CREATE TABLE `materias_periodos` (
   `id_periodo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `materias_periodos`
+--
+
+INSERT INTO `materias_periodos` (`id_materia_periodo`, `id_materia`, `id_periodo`) VALUES
+(4, 7, 5),
+(8, 8, 8);
+
 -- --------------------------------------------------------
 
 --
@@ -123,9 +147,17 @@ CREATE TABLE `materias_periodos` (
 
 CREATE TABLE `periodos_cuatrimestrales` (
   `id_periodo` int(5) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
+  `nombre_periodo` varchar(100) NOT NULL,
   `anio` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `periodos_cuatrimestrales`
+--
+
+INSERT INTO `periodos_cuatrimestrales` (`id_periodo`, `nombre_periodo`, `anio`) VALUES
+(5, 'Mayo-Agosto', 2023),
+(8, 'Septiembre-Diciembre', 2022);
 
 -- --------------------------------------------------------
 
@@ -144,12 +176,19 @@ CREATE TABLE `procesos_solicitudes` (
   `tipo_curso` varchar(20) NOT NULL,
   `programa_educativo` varchar(100) NOT NULL,
   `id_periodo` int(5) NOT NULL,
-  `cuatrimestre` varchar(10) NOT NULL,
-  `grupo` int(2) NOT NULL,
+  `cuatrimestre` varchar(10) DEFAULT NULL,
+  `grupo` int(2) DEFAULT NULL,
   `turno` int(25) NOT NULL,
   `id_tutor` int(5) NOT NULL,
   `id_director` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `procesos_solicitudes`
+--
+
+INSERT INTO `procesos_solicitudes` (`id_proceso`, `matricula`, `fecha`, `tipo_solicitud`, `nombre`, `ap_paterno`, `ap_materno`, `tipo_curso`, `programa_educativo`, `id_periodo`, `cuatrimestre`, `grupo`, `turno`, `id_tutor`, `id_director`) VALUES
+(7, 1931116210, '2022-05-25', 0, 'Angel Daniel', 'Vazquez', 'Tapia', 'curso_normal', 'Ing_TI', 5, '1', 0, 0, 4, 3);
 
 -- --------------------------------------------------------
 
@@ -163,6 +202,14 @@ CREATE TABLE `tutores` (
   `ap_paterno` varchar(50) NOT NULL,
   `ap_materno` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tutores`
+--
+
+INSERT INTO `tutores` (`id_tutor`, `nombre`, `ap_paterno`, `ap_materno`) VALUES
+(4, 'Francisco Guillermo', 'Ochoa', 'Magaña'),
+(5, 'Sergio Michel', 'Pérez', 'Mendoza ');
 
 --
 -- Índices para tablas volcadas
@@ -212,8 +259,8 @@ ALTER TABLE `periodos_cuatrimestrales`
 ALTER TABLE `procesos_solicitudes`
   ADD PRIMARY KEY (`id_proceso`),
   ADD KEY `id_director` (`id_director`),
-  ADD KEY `id_periodo` (`id_periodo`),
-  ADD KEY `id_tutor` (`id_tutor`);
+  ADD KEY `procesos_solicitudes_ibfk_2` (`id_periodo`),
+  ADD KEY `procesos_solicitudes_ibfk_3` (`id_tutor`);
 
 --
 -- Indices de la tabla `tutores`
@@ -235,43 +282,43 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id_alumno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_alumno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `directores`
 --
 ALTER TABLE `directores`
-  MODIFY `id_director` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_director` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `id_materia` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_materia` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `materias_periodos`
 --
 ALTER TABLE `materias_periodos`
-  MODIFY `id_materia_periodo` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_materia_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `periodos_cuatrimestrales`
 --
 ALTER TABLE `periodos_cuatrimestrales`
-  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `procesos_solicitudes`
 --
 ALTER TABLE `procesos_solicitudes`
-  MODIFY `id_proceso` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_proceso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `tutores`
 --
 ALTER TABLE `tutores`
-  MODIFY `id_tutor` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tutor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
@@ -289,8 +336,8 @@ ALTER TABLE `materias_periodos`
 --
 ALTER TABLE `procesos_solicitudes`
   ADD CONSTRAINT `procesos_solicitudes_ibfk_1` FOREIGN KEY (`id_director`) REFERENCES `directores` (`id_director`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `procesos_solicitudes_ibfk_2` FOREIGN KEY (`id_periodo`) REFERENCES `periodos_cuatrimestrales` (`id_periodo`),
-  ADD CONSTRAINT `procesos_solicitudes_ibfk_3` FOREIGN KEY (`id_tutor`) REFERENCES `tutores` (`id_tutor`);
+  ADD CONSTRAINT `procesos_solicitudes_ibfk_2` FOREIGN KEY (`id_periodo`) REFERENCES `periodos_cuatrimestrales` (`id_periodo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `procesos_solicitudes_ibfk_3` FOREIGN KEY (`id_tutor`) REFERENCES `tutores` (`id_tutor`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

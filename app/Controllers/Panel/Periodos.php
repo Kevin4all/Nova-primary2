@@ -42,7 +42,7 @@ class Periodos extends BaseController{
         }
         else {
             crear_mensaje_usuario('No se eliminó el periodo.', 'Hubo un error con nuestro servidor y no se eliminó el periodo, intenta nuevamente, por favor.', 'error');
-            return redirect()->to(route_to('periodos', $id_materia));
+            return redirect()->to(route_to('periodos', $id_periodo));
         }
     }//end eliminar_materia
 

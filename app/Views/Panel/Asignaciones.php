@@ -30,14 +30,16 @@
                 <span>Registrar asignación</span>
               </div>
             </a>
-            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-              <div class="w-full overflow-x-auto">
+            <div
+              class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
+            >
                 <table class="datatable-own display table nowrap table-striped table-hover w-full whitespace-no-wrap">
                 <thead>
                 <tr>
                     <th>#</th>
                     <th>Materia</th>
                     <th>Periodo cuatrimestral</th>
+                    <th>Editar</th>
                     <th>Eliminar</th>
                 </tr>
             </thead>
@@ -49,8 +51,12 @@
 							<tr>
                                 <td>'.++$num.'</td>
                                 <td>'.$materia_periodo->nombre.'</td>
-                                <td>'.$materia_periodo->nombre_periodo.'</td>
+                                <td>'.$materia_periodo->nombre_periodo.' '.$materia_periodo->anio.'</td>
 								<td>
+									<a href="'.route_to('detalles_asignacion', $materia_periodo->id_materia_periodo).'" type="button" class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Editar</a>
+								</td>
+                
+                                <td>
 									<a href="'.route_to('deletear_asignacion', $materia_periodo->id_materia_periodo).'" type="button" class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-purple">Eliminar</a>
 								</td>
 							</tr>
@@ -60,7 +66,6 @@
             </tbody>
                 </table>
               </div>
-            </div>
 
 <?= $this->endSection() ?>
 

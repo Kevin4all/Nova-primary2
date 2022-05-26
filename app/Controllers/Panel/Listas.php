@@ -12,6 +12,7 @@ class Listas extends BaseController{
     {
       $dompdf = new Dompdf();
       $dompdf->loadHTML(view('Panel/plantillapdf', $this->cargar_datos()));
+      $dompdf->loadHTML(view('Panel/alumnos'));
       $dompdf->setPaper('A4', 'landscape');
       $dompdf->render();
       $dompdf->stream();

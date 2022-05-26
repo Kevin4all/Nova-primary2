@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html :class="{ 'theme-dark': light }" x-data="data()" lang="en">
+<html :class="{ 'theme-dark': light }" x-data="data()" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -162,12 +162,13 @@
 
                 <div class="col-4">
                     <div class="form-group">
-                        <label for="simpleinput">Matricula: <i class="fa fa-asterisk"></i></label>
+                        <label for="simpleinput">Matricula: <i class=""></i></label>
                         <?php
                             $parametros = array('type' => 'text',
                                             'class' => 'form-control',
                                             'id' => 'matricula',
-                                            'name' => 'matricula'
+                                            'name' => 'matricula',
+                                            'value' => $matricula
                                             );
                             echo form_input($parametros);
                         ?>
@@ -327,18 +328,18 @@
                         <label for="simpleinput">Programa educativo: <i class="fa fa-asterisk"></i></label>
                         <?php
                                 $options = [
-                                            'Ing_TI' => 'Ing_TI',
-                                            'Ing_Industrial' => 'Ing_Industrial',
-                                            'Ing_Mecatronica' => 'Ing_Mecatronica',
-                                            'Ing_Financiera' => 'Ing_Financiera',
-                                            'Ing_Quimica' => 'Ing_Quimica',
-                                            'Ing_Biotecnologia' => 'Ing_Biotecnologia',
-                                            'Ing_Automotris' => 'Ing_Automotris'
+                                            'Ing_TI' => 'Ing. TI',
+                                            'Ing_Industrial' => 'Ing. Industrial',
+                                            'Ing_Mecatronica' => 'Ing. Mecatrónica',
+                                            'Ing_Financiera' => 'Ing. Financiera',
+                                            'Ing_Quimica' => 'Ing. Química',
+                                            'Ing_Biotecnologia' => 'Ing. Biotecnología',
+                                            'Ing_Automotris' => 'Ing. Sistemas Automotrices'
                                             ];
                                 $otros= [
                                         "class" => "form-control"
                                         ];
-                                echo form_dropdown('programa_educativo', ['' => 'Seleccionar-programa_educativo'] + $options,'',$otros);
+                                echo form_dropdown('programa_educativo', ['' => 'Seleccionar programa educativo'] + $options,'',$otros);
                             ?>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
                     </div>
@@ -349,7 +350,7 @@
                     <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'periodo');
-                        echo form_dropdown('periodo', ['' => 'Selecionar-un-periodo'] + $periodos, array(), $parametros);                    
+                        echo form_dropdown('periodo', ['' => 'Seleccionar periodo'] + $periodos, array(), $parametros);                    
                         ?>
                     </div>
                 </div>
@@ -376,7 +377,7 @@
                                         "class" => "form-control",
                                         "id" => "discountPercentage2"
                                         ];
-                                echo form_dropdown('cuatrimestre', ['' => 'Seleccionar-cuatrimestre'] + $options,'',$otros);
+                                echo form_dropdown('cuatrimestre', ['' => 'Seleccionar cuatrimestre'] + $options,'',$otros);
                             ?>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
                     </div>            
@@ -439,7 +440,7 @@
                     <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'tutor');
-                        echo form_dropdown('tutor', ['' => 'Selecionar-un-tutor'] + $tutores, array(), $parametros);                    
+                        echo form_dropdown('tutor', ['' => 'Seleccionar tutor'] + $tutores, array(), $parametros);                    
                         ?>
                     </div>   
                 </div>
@@ -449,7 +450,7 @@
                     <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'director');
-                        echo form_dropdown('director', ['' => 'Selecionar-un-director'] + $directores, array(), $parametros);                    
+                        echo form_dropdown('director', ['' => 'Seleccionar director'] + $directores, array(), $parametros);                    
                         ?>
                     </div>   
                 </div>
@@ -461,7 +462,7 @@
             <div class="row justify-content-center pt-4 pb-4">
                 <div class="col-4 pt-3">
           
-                    <button type="submit" value="submit" class="btn btn-primary ml-5 mr-4 mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
+                    <button type="submit" value="submit" class="btn btn-primary mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
         
                     <a href="<?= route_to('inicio_alumno') ?>">
                         <button type="button" class="btn btn-danger mt-1"><i class="fa fa-times"></i>&nbsp; Cancelar</button>
@@ -527,6 +528,7 @@
         */
         //deshabilita el campo fecha
         document.getElementById("fecha").disabled = true;
+        document.getElementById("matricula").disabled = true;
         document.getElementById("nombre").disabled = true;
         document.getElementById("ap_paterno").disabled = true;
         document.getElementById("ap_materno").disabled = true;

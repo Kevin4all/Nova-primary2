@@ -30,8 +30,9 @@
                 <span>Registrar periodo</span>
               </div>
             </a>
-            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-              <div class="w-full overflow-x-auto">
+            <div
+              class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
+            >
                 <table class="datatable-own display table nowrap table-striped table-hover w-full whitespace-no-wrap">
                 <thead>
                 <tr>
@@ -64,7 +65,6 @@
             </tbody>
                 </table>
               </div>
-            </div>
 
 <?= $this->endSection() ?>
 

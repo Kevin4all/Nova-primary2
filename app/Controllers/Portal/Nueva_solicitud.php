@@ -17,6 +17,7 @@ class Nueva_solicitud extends BaseController{
         $datos['nombre'] = $session->nombre;
         $datos['ap_paterno'] = $session->ap_paterno;
         $datos['ap_materno'] = $session->ap_materno;
+        $datos['matricula'] = $session->matricula;
 
         //Elementos propios del controlador
         $tabla_periodos_cuatrimestrales = new \App\Models\Tabla_periodos_cuatrimestrales;
@@ -45,7 +46,7 @@ class Nueva_solicitud extends BaseController{
         $solicitud = array();
         $session = session();
         
-        $solicitud['matricula'] = $this->request->getPost('matricula');
+        $solicitud['matricula'] = $session->matricula;
         $solicitud['fecha'] = $this->request->getPost('fecha_hoy');
         $solicitud['tipo_solicitud'] = $this->request->getPost('tipo_solicitud');
         $solicitud['nombre'] = $session->nombre;
@@ -63,11 +64,11 @@ class Nueva_solicitud extends BaseController{
         //dd($solicitud);
 
         if(($tabla_solicitudes->insert($solicitud)) > 0) {
-            crear_mensaje_usuario('Usuario registrado exitosamente', 'El usuario se ha registrado con éxito', 'success');
+            crear_mensaje_usuario('Solicitud registrada exitosamente', 'La solicitud se ha registrado con éxito', 'success');
             return redirect()->to(route_to('inicio_alumno'));
         }//se insertaron los datos a la DB
         else{
-            crear_mensaje_usuario('No se ha registrado el usuario', 'Hubo un error con nuestro servidor y no se registro tu imagen, intentalo nuevamente. Por favor.', 'warning');
+            crear_mensaje_usuario('No se ha registrado la solicitud', 'Hubo un error con nuestro servidor y no se registro la solicitud, intentalo nuevamente. Por favor.', 'warning');
             return redirect()->to(route_to('nueva_solicitud'));
         }//end no se insertaron lso datos a la DB
 
