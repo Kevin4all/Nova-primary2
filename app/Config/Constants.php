@@ -55,8 +55,8 @@ define("COMPLEMENTARIO", "1");
 define("CURSO_NORMAL", "curso_normal");
 define("BAJA_TEMPORAL", "baja_temporal");
 
-define("MATUTINO", "matutino");
-define("VESPERTINO", "vespertino");
+define("MATUTINO", "0");
+define("VESPERTINO", "1");
 
 // ROLES
 define("ROL_ADMIN", array('rol_nombre' => 'Administrador', 'id' => '1'));

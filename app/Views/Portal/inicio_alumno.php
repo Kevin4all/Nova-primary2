@@ -143,7 +143,7 @@
                             </div>
                             <div class="service-cap">
                                 
-                                <h4><?=$nivel_tramite < 1 ? "<a href=\"". route_to('nueva_solicitud'). "\">Generar solicitud</a>" : "<a href=\"". route_to('#editar_solicitud'). "\">Actualizar solicitud</a>";?></h4>
+                                <h4><?=$nivel_tramite < 1 ? "<a href=\"". route_to('nueva_solicitud'). "\">Generar solicitud</a>" : "<a href=\"". route_to('editar_solicitud'). "\">Actualizar solicitud</a>";?></h4>
                                 <!-- <h4><a href="<?= route_to('nueva_solicitud')?>">Generar solicitud</a></h4> -->
 
                             </div>

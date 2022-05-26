@@ -84,7 +84,8 @@ class Nueva_solicitud extends BaseController{
         $alumno['grupo_original'] = $this->request->getPost('grupo');
         $alumno['id_periodo'] = $this->request->getPost('periodo');
 
-        //dd($solicitud);
+        
+        dd($solicitud);
         if(($tabla_solicitudes->insert($solicitud)) > 0 && ($tabla_alumnos->update($id_alumno, $alumno))) {
             crear_mensaje_usuario('Solicitud registrada exitosamente', 'La solicitud se ha registrado con éxito', 'success');
             return redirect()->to(route_to('inicio_alumno'));

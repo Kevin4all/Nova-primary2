@@ -17,5 +17,13 @@ class Tabla_solicitudes extends Model{
                             ->first();
         return $resultado;
     }
+
+    public function obtener_solicitud_especifica($matricula = '') {
+        $resultado = $this
+                            ->select('id_proceso, matricula, fecha, tipo_solicitud, nombre, ap_paterno, ap_materno, tipo_curso, programa_educativo, id_periodo, cuatrimestre, grupo, turno, id_tutor, id_director')
+                            ->where('matricula', $matricula)
+                            ->first();
+        return $resultado;
+    }
     
 }//End Model solicitudes

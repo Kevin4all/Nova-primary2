@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generar solicitud</title>
+    <title>Editar solicitud</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url('recursos_panel/public/assets/css/tailwind.output.css');?>" />
     <link rel="stylesheet" href="<?= base_url('recursos/toast/dist/css/iziToast.min.css') ?>">
@@ -165,13 +165,13 @@
     <div class="conteiner">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Generar Solicitud</strong>
+                <strong class="card-title">Editar Solicitud</strong>
                 <p class="campos-obli">Todos los campos con <span class="color">*</span> son obligatorios</p>
             </div>
             <?php
             $parametros = array('id' => 'form-nueva-solicitud'
                           );
-            echo form_open_multipart('insertar_solicitud', $parametros);
+            echo form_open_multipart('actualizar_solicitud', $parametros);
         ?>
 
             <div class="row justify-content-center pt-4">
@@ -187,7 +187,17 @@
                                             'value' => $matricula
                                             );
                             echo form_input($parametros);
+
+                            $parametros = array (
+                                'type' => 'hidden',
+                                'class' => 'form-control',
+                                'id' => 'id_solicitud',
+                                'name' => 'id_solicitud',
+                                'value' => $detalles_solicitud->id_proceso
+                            );
+                            echo form_input($parametros);
                         ?>
+                        
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
                     </div>
                 </div>
@@ -226,9 +236,9 @@
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
                                                     'id' => 'solicitud_recurse',
-                                                    'name' => 'tipo_solicitud'
+                                                    'name' => 'tipo_solicitud',
                                                     );
-                                echo form_input($parametros, RECURSE);
+                                echo form_radio($parametros, RECURSE, ($detalles_solicitud->tipo_solicitud == RECURSE));
                             ?>Recurse
                                     <!--<input type="radio" id="radio1" name="radios" value="si" class="form-check-input">Sí-->
                                 </label>
@@ -239,9 +249,9 @@
                                 $parametros = array('type' => 'radio',
                                                     'class' => 'form-check-input',
                                                     'id' => 'solicitud_complementario',
-                                                    'name' => 'tipo_solicitud'
+                                                    'name' => 'tipo_solicitud',
                                                     );
-                                echo form_input($parametros, COMPLEMENTARIO);
+                                echo form_radio($parametros, COMPLEMENTARIO, ($detalles_solicitud->tipo_solicitud == COMPLEMENTARIO));
                             ?>Complementario
                                     <!--<input type="radio" id="radio2" name="radios" value="no" class="form-check-input">No-->
                                 </label>
@@ -317,7 +327,7 @@
                                                     'id' => 'curso_normal',
                                                     'name' => 'tipo_curso'
                                                     );
-                                echo form_input($parametros, CURSO_NORMAL);
+                                echo form_radio($parametros, CURSO_NORMAL, ($detalles_solicitud->tipo_curso == CURSO_NORMAL));
                             ?>Normal
                                     <!--<input type="radio" id="radio1" name="radios" value="si" class="form-check-input">Sí-->
                                 </label>
@@ -330,7 +340,7 @@
                                                     'id' => 'curso_baja',
                                                     'name' => 'tipo_curso'
                                                     );
-                                echo form_input($parametros, BAJA_TEMPORAL);
+                                echo form_radio($parametros, BAJA_TEMPORAL, ($detalles_solicitud->tipo_curso == BAJA_TEMPORAL));
                             ?>Baja⠀temporal
                                     <!--<input type="radio" id="radio2" name="radios" value="no" class="form-check-input">No-->
                                 </label>
@@ -355,7 +365,7 @@
                                 $otros= [
                                         "class" => "form-control"
                                         ];
-                                echo form_dropdown('programa_educativo', ['' => 'Seleccionar programa educativo'] + $options,'',$otros);
+                                echo form_dropdown('programa_educativo', ['' => 'Seleccionar programa educativo'] + $options, $detalles_solicitud->programa_educativo,$otros);
                             ?>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
                     </div>
@@ -366,7 +376,7 @@
                         <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'periodo');
-                        echo form_dropdown('periodo', ['' => 'Seleccionar periodo'] + $periodos, array(), $parametros);
+                        echo form_dropdown('periodo', ['' => 'Seleccionar periodo'] + $periodos, $detalles_solicitud->id_periodo, $parametros);
                         ?>
                     </div>
                 </div>
@@ -393,7 +403,7 @@
                                         "class" => "form-control",
                                         "id" => "cuatrimestre"
                                         ];
-                                echo form_dropdown('cuatrimestre', ['' => 'Seleccionar cuatrimestre'] + $options,'',$otros);
+                                echo form_dropdown('cuatrimestre', ['' => 'Seleccionar cuatrimestre'] + $options, $detalles_solicitud->cuatrimestre,$otros);
                             ?>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
                     </div>
@@ -405,7 +415,8 @@
                             $parametros = array('type' => 'text',
                                             'class' => 'form-control',
                                             'id' => 'grupo',
-                                            'name' => 'grupo'
+                                            'name' => 'grupo',
+                                            'value' => $detalles_solicitud->grupo
                                             );
                             echo form_input($parametros);
                         ?>
@@ -424,7 +435,7 @@
                                                     'id' => 'turno_matutino',
                                                     'name' => 'turno'
                                                     );
-                                echo form_input($parametros, MATUTINO);
+                                echo form_radio($parametros, MATUTINO, ($detalles_solicitud->turno == MATUTINO));
                             ?>Matutino
                                     <!--<input type="radio" id="radio1" name="radios" value="si" class="form-check-input">Sí-->
                                 </label>
@@ -437,7 +448,7 @@
                                                     'id' => 'turno_vespertino',
                                                     'name' => 'turno'
                                                     );
-                                echo form_input($parametros, VESPERTINO);
+                                echo form_radio($parametros, VESPERTINO, ($detalles_solicitud->turno == VESPERTINO));
                             ?>Vespertino
                                     <!--<input type="radio" id="radio2" name="radios" value="no" class="form-check-input">No-->
                                 </label>
@@ -456,7 +467,7 @@
                         <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'tutor');
-                        echo form_dropdown('tutor', ['' => 'Seleccionar tutor'] + $tutores, array(), $parametros);
+                        echo form_dropdown('tutor', ['' => 'Seleccionar tutor'] + $tutores, $detalles_solicitud->id_tutor, $parametros);
                         ?>
                     </div>
                 </div>
@@ -466,7 +477,7 @@
                         <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'director');
-                        echo form_dropdown('director', ['' => 'Seleccionar director'] + $directores, array(), $parametros);
+                        echo form_dropdown('director', ['' => 'Seleccionar director'] + $directores, $detalles_solicitud->id_director, $parametros);
                         ?>
                     </div>
                 </div>
@@ -480,7 +491,7 @@
 
                     <div class="mx-auto">
                         <button type="submit" value="submit" class="btn btn-primary mt-1"><i
-                                class="fa fa-check"></i>&nbsp; Generar</button>
+                                class="fa fa-check"></i>&nbsp; Actualizar</button>
                         <a href="<?= route_to('inicio_alumno') ?>">
                             <button type="button" class="btn btn-danger mt-1"><i class="fa fa-times"></i>&nbsp;
                                 Cancelar</button>
@@ -532,6 +543,9 @@
     </script>
 
     <script>
+    window.onload = function() {
+        updateStatus();
+    };
     var discounted = document.getElementById('curso_baja');
     var no_discounted = document.getElementById('curso_normal')
     var discount_percentage = document.getElementById('cuatrimestre')
