@@ -156,7 +156,7 @@
                                 <span class="flaticon-businessman"></span>
                             </div>
                             <div class="service-cap">
-                            <h4><a <?=$nivel_tramite < 1 ? "" : "href=\"\"";?>>Seleccionar materias</a></h4>
+                            <h4><a <?=$nivel_tramite < 1 ? "" : "href=\"". route_to('seleccionar_materias'). "\"";?>>Seleccionar materias</a></h4>
 
 
                             </div>
