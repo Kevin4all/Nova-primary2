@@ -21,8 +21,8 @@
                     <th>Matricula</th>
                     <th>Nombre completo</th>
                     <th>Sexo</th>
-                    <th>Email</th>
-                    <th>Teléfono</th>
+                    <th>Grado Y Grupo</th>
+                    <th>Grupo Recursamiento</th>
                     <th>Periodo cuatrimestral</th>
                     <th>Editar</th>
                 </tr>
@@ -35,8 +35,8 @@
                                 <td>'.$alumno->matricula.'</td>
 								<td>'.$alumno->nombre.' '.$alumno->ap_paterno.' '.$alumno->ap_materno.'</td>
 								<td>'.SEXOS[$alumno->sexo].'</td>
-								<td>'.$alumno->email.'</td>
-								<td>'.$alumno->telefono.'</td>
+								<td>'.$alumno->cuatrimestre_original.'° "'.$alumno->grupo_original.'"</td>
+								<td>'.$alumno->grupo_recursamiento.'</td>
                 <td>'.$alumno->nombre_periodo.' '.$alumno->anio.'</td>
                 <td><a href="'.route_to('detalles_alumno', $alumno->id_alumno).'" type="button" class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Editar</a></td>
 							</tr>
