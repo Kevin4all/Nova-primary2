@@ -158,12 +158,6 @@
             echo form_open_multipart('insertar_solicitud', $parametros);
         ?>
 
-        <?php
-            $parametros = array('id' => 'form-nueva-solicitud2'
-                          );
-            echo form_open_multipart('insertar_solicitud_pdf', $parametros);
-        ?>
-
             <div class="row justify-content-center pt-4">
 
                 <div class="col-4">
@@ -208,7 +202,7 @@
                 </div>
                 <div class="col-4">
                     <div class="form-group">
-                    <div class="form-check mt-2">
+                    <div class="form-check mt-2 mb-4">
                 <label class="direc" for="sexo">Tipo de solicitud: <i class="fa fa-asterisk"></i></label>
                     <div class="radio">
                         <label for="solicitud_recurse" class="form-check-label ">
@@ -381,7 +375,7 @@
                                             ];
                                 $otros= [
                                         "class" => "form-control",
-                                        "id" => "discountPercentage2"
+                                        "id" => "cuatrimestre"
                                         ];
                                 echo form_dropdown('cuatrimestre', ['' => 'Seleccionar cuatrimestre'] + $options,'',$otros);
                             ?>
@@ -394,7 +388,7 @@
                         <?php
                             $parametros = array('type' => 'text',
                                             'class' => 'form-control',
-                                            'id' => 'discountPercentage',
+                                            'id' => 'grupo',
                                             'name' => 'grupo'
                                             );
                             echo form_input($parametros);
@@ -489,24 +483,28 @@
     <script src="<?= base_url("recursos_portal/assets/dark/js/quill.min.js")?>"></script>
     <script src="<?= base_url("recursos_portal/assets/dark/js/apps.js")?>"></script>
     <script src="<?= base_url("recursos_portal/assets/dark/js/bootstrap-validate.js")?>"></script>
-    <script src="<?= base_url("recursos_portal/assets/plugins/jquery/js/jquery.min.js")?>"></script>
+    <!-- <script src="<?= base_url("recursos_portal/assets/plugins/jquery/js/jquery.min.js")?>"></script>
     <script src="<?= base_url("recursos_portal/assets/dark/validate/jquery.validate.min.js")?>"></script>
-    <script src="<?= base_url("recursos_portal/assets/dark/validate/jquery.validate.js")?>"></script>
+    <script src="<?= base_url("recursos_portal/assets/dark/validate/jquery.validate.js")?>"></script> -->
+
+    <!-- Validación de campos -->
+    <script src="<?= base_url('resources/js-validation/jquery/jquery-360.js') ?>"></script>
+    <script src="<?= base_url('resources/js-validation/jquery-validate/jquery.validate.js') ?>"></script>
 
 
     <script>
-        var discounted = document.getElementById('isDiscounted');
-        var no_discounted = document.getElementById('isNotDiscounted')
-        var discount_percentage = document.getElementById('discountPercentage')
-        var discount_percentage2 = document.getElementById('discountPercentage2')
+        var discounted = document.getElementById('curso_baja');
+        var no_discounted = document.getElementById('curso_normal')
+        var discount_percentage = document.getElementById('cuatrimestre')
+        var discount_percentage2 = document.getElementById('grupo')
 
 
         function updateStatus() {
             if (discounted.checked) {
                 discount_percentage.disabled = true;
                 discount_percentage2.disabled = true;
-                document.getElementById('discountPercentage').value="";
-                document.getElementById('discountPercentage2').value="";
+                document.getElementById('cuatrimestre').value="";
+                document.getElementById('grupo').value="";
             } else {
                 discount_percentage.disabled = false;
                 discount_percentage2.disabled = false;
@@ -537,110 +535,63 @@
         document.getElementById("nombre").disabled = true;
         document.getElementById("ap_paterno").disabled = true;
         document.getElementById("ap_materno").disabled = true;
-
-
     </script>
 
     <script>
 
-    $("#form-nueva-solicitud").validate({
-        focusInvalid: false,
+    $('#form-nueva-solicitud').validate({
+        errorElement: "div",
+        focusInfalid: false,
+
+        // Reglas para la validación de campos
         rules: {
-          'matricula': {
-            required: true,
-            digits: true
-          },
-          'modelo': {
-            required: true,
-            rangelength: [3, 50],
-          },
-          'kilometraje':{
-            required: true,
-            digits: true
-          },
-          'transmision':{
-            required: true
-          },
-          'asientos':{
-            required: true
-          },
-          'equipaje':{
-            required: true,
-            digits: true
-          },
-          'combustible':{
-            required: true
-          },
-          'precio':{
-            required: true,
-            digits: true
-          }
-
-        },
-
-        messages: {
-          'matricula': {
-            required: "El matricula es requerida es requerido",
-            digits: "Este campo solo acepta números"
-          },
-          'modelo': {
-            required: "El modelo es requerido",
-            rangelength:
-              "El modelo debe tener entre 3 y 50 caracteres.",
-          },
-          'kilometraje':{
-            required: "El kilometraje es requerido",
-            digits: "Este campo solo acepta números"
-          },
-          'transmision':{
-            required: "Es necesario seleccionar la transmision"
-          },
-          'asientos':{
-            required: "Es necesario seleccionar los asientos"
-          },
-          'equipaje':{
-            required:"El equipaje es requerido",
-            digits: "Este campo solo acepta números"
-          },
-          'combustible':{
-            required:"Es necesario seleccionar el combustible"
-          },
-          'precio':{
-            required:"El precio es requerido",
-            digits: "Este campo solo acepta números"
-          }
-
-        },
-
-        //errors
-        errorPlacement: function errorPlacement(error, element) {
-                var $parent = $(element).parents('.form-group');
-
-                if ($parent.find('.is-invalid').lenght) {
-                    return;
-                }
-
-                $parent.append(
-                    error.addClass('is-invalid')
-                );
+            'tipo_solicitud' : {
+                required: true
             },
-            highlight: function(element) {
-                var $el = $(element);
-                var $parent = $el.parents('.form-group');
-
-                $el.addClass('has-warning form-group');
-
-                if ($el.hasClass('.is-invalid form-control') || $el.attr('data-role') == 'tagsinput' ) {
-                    $el.parent().addClass('is-invalid form-control');
-                }
-            },
-            unhighlight: function(element) {
-                $(element).parents('.form-group').find('.is-invalid form-control').removeClass('is-invalid form-control');
+            'grupo' : {
+                required: true
             }
-        });
+        },
 
+        // Mensajes para las reglas de validación
+        messages: {
+            'tipo_solicitud' : {
+                required: 'Selecciona un tipo de solicitud'
+            },
+            'grupo': {
+                required: 'Es necesario el nombre del usuario'
+            }
+        },
+        
+        errorPlacement: function errorPlacement(error, element) {
+            var $parent = $(element).parents('.form-group');
 
+            if($parent.find('.jquery-validation-error').length) {
+                return;
+            }
 
-</script>
+            $parent.append (
+                error.addClass('jquery-validation-error small form-text invalid-feedback')
+            );
+        },
+        highlight: function(element) {
+            var $el = $(element);
+            var $parent = $el.parents('.form-group');
+
+            $el.addClass('is-invalid');
+
+            if($el.hasClass('select2-hidden-accessible') || $el.attr('data-role') == 'tagsinput') {
+                $el.parent().addClass('is-invalid');
+            }
+
+            if($el.hasClass('form-check-input')) {
+                $el.parent().find('.is-invalid').removeClass('is-invalid');
+            }
+        },
+        unhighlight: function(element) {
+            $(element).parents('.form-group').find('.is-invalid').removeClass('is-invalid');
+        }
+    });
+    </script>
   </body>
 </html>
