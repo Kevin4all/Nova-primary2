@@ -8,16 +8,6 @@ use Dompdf\Dompdf;
 
 class Listas extends BaseController{
 
-    public function demoPDF()
-    {
-      $dompdf = new Dompdf();
-      $dompdf->loadHTML(view('Panel/plantillapdf', $this->cargar_datos()));
-      $dompdf->loadHTML(view('Panel/alumnos'));
-      $dompdf->setPaper('A4', 'landscape');
-      $dompdf->render();
-      $dompdf->stream();
-    }
-
     public function index(){
         return $this->crear_vista('Panel/listas', $this->cargar_datos());
     }//end index
