@@ -18,7 +18,7 @@ class Asignaciones extends BaseController{
     }
 
     public function index(){
-        if($this->esta_permitidoo){
+        if($this->esta_permitido){
             return $this->crear_vista('Panel/asignaciones', $this->cargar_datos());
         }else{
             crear_mensaje_usuario('Acceso no autorizado.', 'No puedes acceder a esta sección sin un usuario autorizado.', 'error');
