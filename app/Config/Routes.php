@@ -96,8 +96,7 @@ $routes->post('/alumnos/editar_alumno', 'Panel/Alumno_detalles::actualizar_alumn
 
 $routes->get('/listas', 'Panel/Listas::index', ['as' => 'listas']);
 
-$routes->get('/plantillapdf', 'Panel/Pruebapdf::index', ['as' => 'plantillapdf']);
-$routes->get('/pdf_demo', 'Panel/Listas::demoPDF', ['as' => 'pdf_demo']);
+$routes->get('/solicitud_pdf', 'Portal/Solicitud_pdf::imprimirpdf', ['as' => 'solicitud_pdf']);
 
 
 

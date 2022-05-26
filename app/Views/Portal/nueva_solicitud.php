@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<?= base_url("recursos_portal/assets/dark/css/jquery.timepicker.css")?>">
     <link rel="stylesheet" href="<?= base_url("recursos_portal/assets/dark/css/quill.snow.css")?>">
 
-    <link rel="stylesheet" href="<?= base_url("recursos_portal/assets/dark/css/daterangepicker.css")?>"> 
+    <link rel="stylesheet" href="<?= base_url("recursos_portal/assets/dark/css/daterangepicker.css")?>">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="<?= base_url("recursos-panel/assets/css/cs-skin-elastic.css"); ?>">
-    
+
     <link rel="stylesheet" href="<?= base_url("recursos_portal//assets/css/style.css"); ?>">
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
@@ -145,7 +145,7 @@
 
   </head>
   <body>
-    
+
   <div class="conteiner">
     <div class="card">
         <div class="card-header">
@@ -156,6 +156,12 @@
             $parametros = array('id' => 'form-nueva-solicitud'
                           );
             echo form_open_multipart('insertar_solicitud', $parametros);
+        ?>
+
+        <?php
+            $parametros = array('id' => 'form-nueva-solicitud2'
+                          );
+            echo form_open_multipart('insertar_solicitud_pdf', $parametros);
         ?>
 
             <div class="row justify-content-center pt-4">
@@ -232,7 +238,7 @@
                     </div>
                 </div>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
-                    </div>             
+                    </div>
                 </div>
 
             </div>
@@ -252,7 +258,7 @@
                             echo form_input($parametros);
                         ?>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
-                    </div>             
+                    </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
@@ -321,7 +327,7 @@
                     </div>
                 </div>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
-                    </div>          
+                    </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
@@ -350,7 +356,7 @@
                     <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'periodo');
-                        echo form_dropdown('periodo', ['' => 'Seleccionar periodo'] + $periodos, array(), $parametros);                    
+                        echo form_dropdown('periodo', ['' => 'Seleccionar periodo'] + $periodos, array(), $parametros);
                         ?>
                     </div>
                 </div>
@@ -380,7 +386,7 @@
                                 echo form_dropdown('cuatrimestre', ['' => 'Seleccionar cuatrimestre'] + $options,'',$otros);
                             ?>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
-                    </div>            
+                    </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
@@ -428,7 +434,7 @@
                     </div>
                 </div>
                         <!--<input type="text" id="simpleinput" name="nombre" class="form-control">-->
-                    </div>   
+                    </div>
                 </div>
 
             </div>
@@ -440,9 +446,9 @@
                     <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'tutor');
-                        echo form_dropdown('tutor', ['' => 'Seleccionar tutor'] + $tutores, array(), $parametros);                    
+                        echo form_dropdown('tutor', ['' => 'Seleccionar tutor'] + $tutores, array(), $parametros);
                         ?>
-                    </div>   
+                    </div>
                 </div>
                 <div class="col-4">
                 <div class="form-group">
@@ -450,20 +456,20 @@
                     <?php
                         $parametros = array('class' => 'form-control',
                                   'id' => 'director');
-                        echo form_dropdown('director', ['' => 'Seleccionar director'] + $directores, array(), $parametros);                    
+                        echo form_dropdown('director', ['' => 'Seleccionar director'] + $directores, array(), $parametros);
                         ?>
-                    </div>   
+                    </div>
                 </div>
                 <div class="col-4">
-                
-                </div> 
+
+                </div>
 
             </div>
             <div class="row justify-content-center pt-4 pb-4">
                 <div class="col-4 pt-3">
-          
+
                     <button type="submit" value="submit" class="btn btn-primary mt-1"><i class="fa fa-check"></i>&nbsp; Generar</button>
-        
+
                     <a href="<?= route_to('inicio_alumno') ?>">
                         <button type="button" class="btn btn-danger mt-1"><i class="fa fa-times"></i>&nbsp; Cancelar</button>
                     </a>
@@ -472,13 +478,11 @@
 
         <?= form_close() ?>
 
-        
-
     </div>
 </div>
 
 
-        
+
     <script src="<?= base_url("recursos_portal/assets/dark/js/dropzone.min.js")?>"></script>
     <script src="<?= base_url("recursos_portal/assets/dark/js/uppy.min.js")?>"></script>
     <script src="<?= base_url("recursos_portal/assets/dark/js/quill.min.js")?>"></script>
@@ -511,7 +515,7 @@
     discounted.addEventListener('change', updateStatus)
     no_discounted.addEventListener('change', updateStatus)
     </script>
-    
+
     <script>
         /*
         window.onload = function(){
@@ -532,8 +536,8 @@
         document.getElementById("nombre").disabled = true;
         document.getElementById("ap_paterno").disabled = true;
         document.getElementById("ap_materno").disabled = true;
-        
-        
+
+
     </script>
 
     <script>
@@ -634,7 +638,7 @@
             }
         });
 
-  
+
 };
 
 </script>

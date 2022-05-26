@@ -58,7 +58,7 @@
                     margin-top: 10px;
                     width: 60%;
                     padding: 4px;
-                    border-radius:10px; 
+                    border-radius:10px;
                     border: 2px solid gray;
                     color: black;
                 }
@@ -92,7 +92,7 @@
                 .cerrar{
                     padding: 5px;
                     height:10px;
-                    color: white; 
+                    color: white;
                     text-align: center;
                     background-color: red;
                 }
@@ -104,7 +104,7 @@
    </head>
 
    <body>
-       
+
         <!-- Best Features End -->
         <!-- Services Area Start -->
         <header class="header">
@@ -122,7 +122,7 @@
                     <div class="col-lg-6">
                         <div class="text-center">
                             <b><h1 class="titulo">Tramites de recursamiento</h1></b>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -132,36 +132,35 @@
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
-                            </div> 
+                            </div>
                             <div class="service-cap">
                                 <h4><a href="<?= route_to('nueva_solicitud')?>">Generar solicitud</a></h4>
-                                
+
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
-                            </div> 
+                            </div>
                             <div class="service-cap">
                             <h4><a href="#">Seleccionar materias</a></h4>
-                                
-                                
+
+
                             </div>
                         </div>
                     </div>
-                     
+
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="services-caption text-center mb-30">
                             <div class="service-icon">
                                 <span class="flaticon-businessman"></span>
-                            </div> 
+                            </div>
                             <div class="service-cap">
-                            <h4><a href="#">Ver reporte</a></h4>
+                            <h4><a href="<?= route_to('solicitud_pdf')?>">Ver reporte</a></h4>
 
-                                
                             </div>
                         </div>
                     </div>
@@ -184,12 +183,12 @@
        <!-- Footer End-->
 
    </footer>
-   
+
 	<!-- JS here -->
-	
+
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="<?= base_url("recursos_portal/js/vendor/modernizr-3.5.0.min.js"); ?>"></script>
-		
+
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="<?= base_url("recursos_portal/js/vendor/jquery-1.12.4.min.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/popper.min.js"); ?>"></script>
@@ -211,15 +210,15 @@
         <script src="<?= base_url("recursos_portal/js/jquery.scrollUp.min.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.nice-select.min.js"); ?>"></script>
 		<script src="<?= base_url("recursos_portal/js/jquery.sticky.js"); ?>"></script>
-        
+
         <!-- contact js -->
         <script src="<?= base_url("recursos_portal/js/contact.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.form.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.validate.min.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/mail-script.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/jquery.ajaxchimp.min.js"); ?>"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
+
+		<!-- Jquery Plugins, main Jquery -->
         <script src="<?= base_url("recursos_portal/js/plugins.js"); ?>"></script>
         <script src="<?= base_url("recursos_portal/js/main.js"); ?>"></script>
 
@@ -227,6 +226,6 @@
         <script src="<?= base_url('recursos_panel/toast/dist/js/iziToast.min.js')?>" type="text/javascript"></script>
 
         <script><?= imprimir_mensaje() ?></script>
-        
+
     </body>
 </html>
